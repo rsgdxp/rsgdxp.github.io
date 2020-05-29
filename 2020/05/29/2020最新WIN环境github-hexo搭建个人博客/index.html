@@ -446,7 +446,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.9k
+                    2k
                 </div>
                 
 
@@ -502,8 +502,6 @@
 <p><code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code></p>
 <p>这里的<code>邮件地址</code>最好写注册<code>GitHub</code>的地址，这样方便以后的管理。敲入代码后连续按3次回车（如果之前操作那么看提示 我就是这样），最终会生成一个文件在用户目录下，打开用户目录，找到<code>.ssh\id_rsa.pub</code>文件，文本编辑工具打开并复制里面的内容。</p>
 <p>打开你的 GitHub 主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key，并将刚刚复制的内容填入 Key 那里。Title 你可以随便起。最后别忘了保存。</p>
-<p><img src="" alt="https://www.faber.cc/2019/10/13/4/2.png"></p>
-<p>我偷懒没截图 引用一下 谢谢~</p>
 <h5 id="3-2-测试-SSH-key是否成功"><a href="#3-2-测试-SSH-key是否成功" class="headerlink" title="3.2. 测试 SSH key是否成功"></a>3.2. 测试 SSH key是否成功</h5><p>在终端里面敲入一下命令行并回车：</p>
 <p><code>ssh -T git@github.com</code></p>
 <p>如果提示Are you sure you want to continue connecting (yes/no)?，输入yes 并回车，然后会看到：</p>
@@ -550,16 +548,16 @@
 <blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
 </blockquote>
-<h5 id="4-6-根目录-config-yml-文件"><a href="#4-6-根目录-config-yml-文件" class="headerlink" title="4.6 根目录 _config.yml 文件"></a>4.6 根目录 _config.yml 文件</h5><p>这里面都是一些<code>Hexo</code>的全局配置（<strong>要区别主题目录里同名文件哦</strong>），每个参数的意思都比较简单明了，所以就不作详细介绍了。<br>需要特别注意的地方是，冒号后面必须有一个空格，否则可能会出问题</p>
+<h5 id="4-6-根目录-config-yml-文件"><a href="#4-6-根目录-config-yml-文件" class="headerlink" title="4.6 根目录 _config.yml 文件"></a>4.6 根目录 _config.yml 文件</h5><p>这里面都是一些<code>Hexo</code>的全局配置（<strong>要区别主题目录里同名文件哦，主题一些个性化定义在此文件修改</strong>），每个参数的意思都比较简单明了，所以就不作详细介绍了。<br>需要特别注意的地方是，冒号后面必须有一个空格，否则可能会出问题</p>
 <h3 id="5-发布文章"><a href="#5-发布文章" class="headerlink" title="5. 发布文章"></a>5. 发布文章</h3><p><code>hexo new &#39;文章标题&#39;</code></p>
 <p>Hexo 会帮我们在 /source/_posts 文件夹下生成相关 md 格式的文件 ；<code>md</code>格式是<code>Markdown</code>文件的格式，所以只要使用规范的<code>Markdown</code>语法进行书写即可。可以用 <strong>Typora</strong> 等<code>Markdown</code>编辑器写文章。</p>
 <p>一般完整格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: postName #文章页面上的显示名称，一般是中文</span><br><span class="line">date: 2020-05-29 15:30:16 #文章生成时间，一般不改，当然也可以任意修改</span><br><span class="line">categories: 默认分类 #分类</span><br><span class="line">tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格</span><br><span class="line">description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">以下是正文</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: postName <span class="comment">#文章页面上的显示名称，一般是中文</span></span><br><span class="line">date: 2020-05-29 15:30:16 <span class="comment">#文章生成时间，一般不改，当然也可以任意修改</span></span><br><span class="line">categories: 默认分类 <span class="comment">#分类</span></span><br><span class="line">tags: [tag1,tag2,tag3] <span class="comment">#文章标签，可空，多标签请用格式，注意:后面有个空格</span></span><br><span class="line">description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">以下是正文</span><br></pre></td></tr></table></figure>
 
+<p>写好文章后 执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
-
-
-
+<p>我这里实际是需要等待一会儿，刷新网页即可看到最新状态。</p>
 <p>参考：</p>
 <p><a href="https://www.faber.cc/2019/10/13/4/" target="_blank" rel="noopener">https://www.faber.cc/2019/10/13/4/</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/82543224" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/82543224</a> 等。</p>
@@ -947,8 +945,6 @@
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
 
 <!-- 代码块复制 -->
 
@@ -957,12 +953,10 @@
 
 <!-- 代码块收缩 -->
 
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
 
 <!-- 代码块折行 -->
-
-<style type="text/css">
-code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
-</style>
 
 
     </div>
