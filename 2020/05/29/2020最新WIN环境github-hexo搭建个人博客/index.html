@@ -446,14 +446,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    2k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    7 Min
+                    8 Min
                 </div>
                 
 
@@ -479,24 +479,28 @@
 </ul>
 </blockquote>
 <h5 id="1-1准备工作"><a href="#1-1准备工作" class="headerlink" title="1.1准备工作"></a>1.1准备工作</h5><ul>
-<li>一个<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>账户（本文以 WIN环境下 GitHub 为例)</li>
-<li>安装<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>，Node.js 是多平台的，去官网选择相应的系统版本下载安装即可</li>
-<li>安装<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>，<code>Git</code>也是多平台的，去官网选择相应的系统版本下载安装即可。</li>
+<li><p>一个<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>账户（本文以 WIN环境下 GitHub 为例)</p>
+</li>
+<li><p>安装<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>，Node.js 是多平台的，去官网选择相应的系统版本下载安装即可,安装选项全部默认，一路点击<code>Next</code>。</p>
+<p>最后安装好之后，按<code>Win+R</code>打开命令提示符，输入<code>node -v</code>和<code>npm -v</code>，如果出现版本号，那么就安装成功了。</p>
+</li>
+<li><p>安装<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>，<code>Git</code>也是多平台的，去官网选择相应的系统版本下载安装即可,安装完成后在命令提示符中输入<code>git --version</code>验证是否安装成功。</p>
+</li>
 </ul>
 <h3 id="2-设置GitHub博客"><a href="#2-设置GitHub博客" class="headerlink" title="2.设置GitHub博客"></a>2.设置GitHub博客</h3><ul>
 <li><h5 id="2-1-创建-GitHub-仓库"><a href="#2-1-创建-GitHub-仓库" class="headerlink" title="2.1. 创建 GitHub 仓库"></a>2.1. 创建 GitHub 仓库</h5></li>
-<li><p>新建一个名为你的用户名<code>.github.io</code>的仓库。比如说，如果你的 GitHub 用户名是rsgdxp，那么你就新建的仓库就是rsgdxp.github.io，网站访问地址也是这个地址。</p>
+<li><p>注册登录后，点右上角头像左边+号，点 New repository ,新建一个名为你的用户名<code>.github.io</code>的仓库。比如说，如果你的 GitHub 用户名是rsgdxp，那么你就新建的仓库就是rsgdxp.github.io，网站访问地址也是这个地址。</p>
 </li>
 <li><p>需要注意的是注册github的邮箱一定要验证，否则不会成功</p>
 <p>仓库名字必须是：username.github.io，其中username是你的github用户名</p>
 <h5 id="2-2-绑定域名（可选）"><a href="#2-2-绑定域名（可选）" class="headerlink" title="2.2. 绑定域名（可选）"></a>2.2. 绑定域名（可选）</h5><p>本例没有操作，比较好解决。</p>
 <h5 id="2-3-设置-GitHub-Pages"><a href="#2-3-设置-GitHub-Pages" class="headerlink" title="2.3 设置 GitHub Pages"></a>2.3 设置 GitHub Pages</h5><p><code>GitHub Pages</code>是<code>GitHub</code>为我们提供的静态页面服务<code>Hexo</code>就是一个静态博客框架。我们只有开始<code>GitHub Pages</code>才能使我们的博客生效并且能够被访问。<br>打开你的<code>GitHub</code>博客仓库 点击 Settings (设置 )</p>
 <p><img src="http://pan-yz.chaoxing.com/download/downloadfile?fleid=473174808377675776&puid=138075780" alt="2020-05-29_170623"></p>
-<p>圆圈1 选择一个主题 ，圆圈2 开启SSL访问 ，圆圈3 就是上面说的绑定域名了。</p>
+<p>圆圈1 选择一个主题 等待一会儿，圆圈2 开启SSL访问 ，圆圈3 就是上面说的绑定域名了。</p>
 </li>
 </ul>
 <h3 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h3><h5 id="3-1配置SSH-Key"><a href="#3-1配置SSH-Key" class="headerlink" title="3.1配置SSH Key"></a>3.1配置SSH Key</h5><p>因为你提交代码肯定要拥有你的 GitHub 权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用 SSK key 来解决本地和服务器的连接问题。</p>
-<p>桌面空白处，鼠标右键，选择Git bash here 打开终端。</p>
+<p>桌面空白处（其实建立好hexo目录后 在目录右键也可以），鼠标右键，<strong>选择Git bash here</strong> 打开终端。</p>
 <p><code>cd ~/. ssh</code></p>
 <p>测试一下是否有 SSH key 的命令，如果提示 No such file or directory或者其它 继续</p>
 <p><code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code></p>
@@ -520,6 +524,7 @@
 <p>先本地预览一下：</p>
 <p><code>hexo s</code></p>
 <p>根据提示，打开浏览器访问 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000</a> 即可看到内容。默认的主题Licardo一般。</p>
+<p>按<code>ctrl+c</code>关闭</p>
 <h5 id="4-3-修改主题"><a href="#4-3-修改主题" class="headerlink" title="4.3. 修改主题"></a>4.3. 修改主题</h5><p>接下来自己可以替换一个喜欢的主题。这是 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">官方主题</a>库，里面有很多好看的、实用的主题。<br>个人比较喜欢的主题是:<code>hexo-theme-matery</code>，预览 <a href="https://blinkfox.github.io/" target="_blank" rel="noopener">https://blinkfox.github.io/</a><br>首先下载这个主题，在终端里面执行下面的命令：<br>请在稳定版与最新版中二选一</p>
 <p><code>cd F:\hexo\themes</code></p>
 <p><code>git clone https://github.com/blinkfox/hexo-theme-matery.git            # 稳定版</code></p>
@@ -783,6 +788,33 @@
             
         </div>
     </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '9951d4457d94e60d319c',
+        clientSecret: '0d9566551a4f7fd44611008afd99aeeb1b4bcb66',
+        repo: 'rsgdxp.github.io',
+        owner: 'rsgdxp',
+        admin: "rsgdxp",
+        id: '2020-05-29T16-15-11',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
 
     
 
