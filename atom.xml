@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rsgdxp.github.io/"/>
-  <updated>2020-05-31T11:02:55.127Z</updated>
+  <updated>2020-05-31T11:51:41.203Z</updated>
   <id>https://rsgdxp.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rsgdxp.github.io/2020/05/31/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
     <id>https://rsgdxp.github.io/2020/05/31/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</id>
     <published>2020-05-31T09:21:23.000Z</published>
-    <updated>2020-05-31T11:02:55.127Z</updated>
+    <updated>2020-05-31T11:51:41.203Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,8 @@
     
     </summary>
     
+    
+      <category term="hexo" scheme="https://rsgdxp.github.io/categories/hexo/"/>
     
     
       <category term="hexo" scheme="https://rsgdxp.github.io/tags/hexo/"/>
