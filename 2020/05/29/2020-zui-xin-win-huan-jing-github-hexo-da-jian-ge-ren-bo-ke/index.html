@@ -426,6 +426,15 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                经验分享
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -440,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-29
+                    2020-06-01
                 </div>
                 
 
@@ -505,8 +514,10 @@
 <p><code>cd ~/. ssh</code></p>
 <p>测试一下是否有 SSH key 的命令，如果提示 No such file or directory或者其它 继续</p>
 <p><code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code></p>
-<p>这里的<code>邮件地址</code>最好写注册<code>GitHub</code>的地址，这样方便以后的管理。敲入代码后连续按3次回车（如果之前操作那么看提示 我就是这样），最终会生成一个文件在用户目录下，打开用户目录，找到<code>.ssh\id_rsa.pub</code>文件，文本编辑工具打开并复制里面的内容。</p>
-<p>打开你的 GitHub 主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key，并将刚刚复制的内容填入 Key 那里。Title 你可以随便起。最后别忘了保存。</p>
+<p>这里的<code>邮件地址</code>最好写注册<code>GitHub</code>的地址，这样方便以后的管理。敲入代码后连续按3次回车（如果之前操作那么看提示 我就是这样），最终会生成一个文件在用户目录下</p>
+<p>git bash中输入</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">cat</span> ~/.ssh/id_rsa.pub</code></pre>
+<p>打开你的 GitHub 主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key，并将刚刚输出的内容填入 Key 那里。Title 你可以随便起。最后别忘了保存。</p>
 <h5 id="3-2-测试-SSH-key是否成功"><a href="#3-2-测试-SSH-key是否成功" class="headerlink" title="3.2. 测试 SSH key是否成功"></a>3.2. 测试 SSH key是否成功</h5><p>在终端里面敲入一下命令行并回车：</p>
 <p><code>ssh -T git@github.com</code></p>
 <p>如果提示Are you sure you want to continue connecting (yes/no)?，输入yes 并回车，然后会看到：</p>
@@ -879,11 +890,23 @@ description: 附加一段文章摘要，字数最好在140字以内，会出现�
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            rsgdxp
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                    经验分享
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/code/">
+                        <span class="chip bg-color">code</span>
+                    </a>
+                    
                 </div>
                 
             </div>
