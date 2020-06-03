@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Tags, rsgdxp&#39;s blog">
+    <meta name="keywords" content="为v2board 添加电报、TG, rsgdxp&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Tags | rsgdxp&#39;s blog</title>
+    <title>为v2board 添加电报、TG | rsgdxp&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Tags</h1>
+                    <h1 class="description center-align post-title">为v2board 添加电报、TG</h1>
                 </div>
             </div>
         </div>
@@ -407,12 +407,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/v2board/">
+                                <span class="chip bg-color">v2board</span>
+                            </a>
+                        
+                            <a href="/tags/tg/">
+                                <span class="chip bg-color">tg</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                经验分享
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -421,21 +438,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-29
+                    2020-06-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-29
+                    2020-06-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    277
                 </div>
                 
 
@@ -457,7 +474,54 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>前些天更新1.3版本后，发现添加了绑定电报|Telegram选项，随后测试添加了，进行</p>
+<blockquote>
+<p><strong>第二步</strong><br>配置完成第一步后点击V2Board后台管理-&gt;Telegram-&gt;一键设置</p>
+</blockquote>
+<p>时报错 server error ，当时没有解决。今天无意电报群里看到了，官方更新了 DOC文档</p>
+<p><a href="http://docs.v2board.com/use/telegram.html" target="_blank" rel="noopener">http://docs.v2board.com/use/telegram.html</a></p>
+<p>得来不费功夫的，一分钟不到解决了。测试试用了，查询流量等功能，绑定电报功能，还不错！</p>
+<h1 id="Telegram"><a href="#Telegram" class="headerlink" title="Telegram"></a>Telegram</h1><p>V2Board内置Telegram功能介绍。</p>
+<h3 id="如何配置"><a href="#如何配置" class="headerlink" title="如何配置"></a>如何配置</h3><p><strong>第一步</strong><br>Telegram联系@botfather创建机器人Token，创建后填入V2Board后台管理-&gt;Telegram-&gt;机器人Token</p>
+<p><strong>第二步</strong><br>配置完成第一步后点击V2Board后台管理-&gt;Telegram-&gt;一键设置</p>
+<p><strong>第三步</strong><br>V2Board后台管理-&gt;Telegram-&gt;开启机器人通知</p>
+<h3 id="支持指令"><a href="#支持指令" class="headerlink" title="支持指令"></a>支持指令</h3><table>
+<thead>
+<tr>
+<th align="left">指令</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">/help</td>
+<td align="left">无</td>
+<td align="left">获取帮助信息，未匹配到指令时默认触发该指令</td>
+</tr>
+<tr>
+<td align="left">/traffic</td>
+<td align="left">无</td>
+<td align="left">查看流量信息</td>
+</tr>
+<tr>
+<td align="left">/bind</td>
+<td align="left">订阅地址</td>
+<td align="left">绑定Telegram</td>
+</tr>
+</tbody></table>
+<h3 id="通知"><a href="#通知" class="headerlink" title="通知"></a>通知</h3><table>
+<thead>
+<tr>
+<th align="left">通知项目</th>
+<th align="left">是否支持</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">管理员工单通知</td>
+<td align="left">☑️</td>
+</tr>
+</tbody></table>
+
             </div>
             <hr/>
 
@@ -482,7 +546,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rsgdxp.github.io/tags/index.html">https://rsgdxp.github.io/tags/index.html</a>
+                    <a href="https://rsgdxp.github.io/2020/06/03/wei-v2board-tian-jia-dian-bao-tg/">https://rsgdxp.github.io/2020/06/03/wei-v2board-tian-jia-dian-bao-tg/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -519,7 +583,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/v2board/">
+                                    <span class="chip bg-color">v2board</span>
+                                </a>
+                            
+                                <a href="/tags/tg/">
+                                    <span class="chip bg-color">tg</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -688,7 +760,7 @@
         repo: 'rsgdxp.github.io',
         owner: 'rsgdxp',
         admin: "rsgdxp",
-        id: '2020-05-29T11-58-05',
+        id: '2020-06-03T11-01-17',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -717,34 +789,54 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/2020/06/03/wei-v2board-tian-jia-dian-bao-tg/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Tags">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="为v2board 添加电报、TG">
                         
-                        <span class="card-title">Tags</span>
+                        <span class="card-title">为v2board 添加电报、TG</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            前些天更新1.3版本后，发现添加了绑定电报|Telegram选项，随后测试添加了，进行
+
+第二步配置完成第一步后点击V2Board后台管理-&gt;Telegram-&gt;一键设置
+
+时报错 server error ，当时没有解决。今天
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-03
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            rsgdxp
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                    经验分享
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/v2board/">
+                        <span class="chip bg-color">v2board</span>
+                    </a>
+                    
+                    <a href="/tags/tg/">
+                        <span class="chip bg-color">tg</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -752,37 +844,63 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/2020/06/01/matery-zhu-ti-wen-zhang-front-matter-jie-shao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Tags">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="matery主题 文章 Front-matter 介绍">
                         
-                        <span class="card-title">Tags</span>
+                        <span class="card-title">matery主题 文章 Front-matter 介绍</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            文章 Front-matter 介绍Front-matter 选项详解Front-matter 选项中的所有内容均为非必填的。但我仍然建议至少填写 title 和 date 的值。
+
+
+
+配置选项
+默认值
+描述
+
+
+
+title
+Markd
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-01
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            rsgdxp
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                    经验分享
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/matery/">
+                        <span class="chip bg-color">matery</span>
+                    </a>
+                    
+                    <a href="/tags/Front-matter/">
+                        <span class="chip bg-color">Front-matter</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

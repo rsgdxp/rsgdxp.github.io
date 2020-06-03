@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>为v2board 添加电报、TG</title>
+      <link href="/2020/06/03/wei-v2board-tian-jia-dian-bao-tg/"/>
+      <url>/2020/06/03/wei-v2board-tian-jia-dian-bao-tg/</url>
+      
+        <content type="html"><![CDATA[<p>前些天更新1.3版本后，发现添加了绑定电报|Telegram选项，随后测试添加了，进行</p><blockquote><p><strong>第二步</strong><br>配置完成第一步后点击V2Board后台管理-&gt;Telegram-&gt;一键设置</p></blockquote><p>时报错 server error ，当时没有解决。今天无意电报群里看到了，官方更新了 DOC文档</p><p><a href="http://docs.v2board.com/use/telegram.html" target="_blank" rel="noopener">http://docs.v2board.com/use/telegram.html</a></p><p>得来不费功夫的，一分钟不到解决了。测试试用了，查询流量等功能，绑定电报功能，还不错！</p><h1 id="Telegram"><a href="#Telegram" class="headerlink" title="Telegram"></a>Telegram</h1><p>V2Board内置Telegram功能介绍。</p><h3 id="如何配置"><a href="#如何配置" class="headerlink" title="如何配置"></a>如何配置</h3><p><strong>第一步</strong><br>Telegram联系@botfather创建机器人Token，创建后填入V2Board后台管理-&gt;Telegram-&gt;机器人Token</p><p><strong>第二步</strong><br>配置完成第一步后点击V2Board后台管理-&gt;Telegram-&gt;一键设置</p><p><strong>第三步</strong><br>V2Board后台管理-&gt;Telegram-&gt;开启机器人通知</p><h3 id="支持指令"><a href="#支持指令" class="headerlink" title="支持指令"></a>支持指令</h3><table><thead><tr><th align="left">指令</th><th align="left">参数</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">/help</td><td align="left">无</td><td align="left">获取帮助信息，未匹配到指令时默认触发该指令</td></tr><tr><td align="left">/traffic</td><td align="left">无</td><td align="left">查看流量信息</td></tr><tr><td align="left">/bind</td><td align="left">订阅地址</td><td align="left">绑定Telegram</td></tr></tbody></table><h3 id="通知"><a href="#通知" class="headerlink" title="通知"></a>通知</h3><table><thead><tr><th align="left">通知项目</th><th align="left">是否支持</th></tr></thead><tbody><tr><td align="left">管理员工单通知</td><td align="left">☑️</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> v2board </tag>
+            
+            <tag> tg </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>matery主题 文章 Front-matter 介绍</title>
       <link href="/2020/06/01/matery-zhu-ti-wen-zhang-front-matter-jie-shao/"/>
       <url>/2020/06/01/matery-zhu-ti-wen-zhang-front-matter-jie-shao/</url>
@@ -144,6 +171,12 @@
         <content type="html"><![CDATA[<p>记第一 个坑</p><p>修改 根目录下的_config.yml文件 后 报这个错</p><p>查了半天 冒号后面要有空格；还有说的用中文双引号；还有的说文件编码问题……</p><p>突然看到一条网友回复：</p><p>还有报下一行的错其实是上一行出问题了。。。</p><p>擦 怪不得我修改报错那行半天 怎么改怎么不行，删除还是报错下一行……</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
