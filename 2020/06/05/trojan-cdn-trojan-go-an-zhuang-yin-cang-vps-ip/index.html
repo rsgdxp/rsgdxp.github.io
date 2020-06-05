@@ -517,16 +517,13 @@ apt install unzip -y
 
 apt install wget -y
 
-apt install nginx -y</code></pre><h3 id="2、检查-NGINX-是否安装成功"><a href="#2、检查-NGINX-是否安装成功" class="headerlink" title="2、检查 NGINX 是否安装成功"></a>2、检查 NGINX 是否安装成功</h3><p>在浏览器输入绑定到VPS的域名，</p>
+apt install nginx -y</code></pre><h3 id="2、检查-NGINX-是否安装成功"><a href="#2、检查-NGINX-是否安装成功" class="headerlink" title="2、检查 NGINX 是否安装成功"></a>2、检查 NGINX 是否安装成功</h3><p>在浏览器输入绑定到VPS的域名验证 图片省略 下同</p>
 <p>PS：在申请到证书之前，请保持域名 <strong>未开启CDN</strong> </p>
-<p><img src="https://www.v2rayssr.com/wp-content/uploads/2020/06/%E6%88%AA%E5%B1%8F2020-06-02-%E4%B8%8B%E5%8D%889.13.13.png" alt="img"></p>
 <h3 id="3、部署官方Trojan-Go程序"><a href="#3、部署官方Trojan-Go程序" class="headerlink" title="3、部署官方Trojan-Go程序"></a>3、部署官方Trojan-Go程序</h3><p>输入如下命令下载官方trojan-go程序。</p>
 <pre><code>wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.5.1/trojan-go-linux-amd64.zip</code></pre><p>解压刚才下载的程序包至 /etc 目录</p>
 <pre><code>unzip trojan-go-linux-amd64.zip -d /etc/trojan-go</code></pre><h3 id="4、申请证书或放置证书"><a href="#4、申请证书或放置证书" class="headerlink" title="4、申请证书或放置证书"></a>4、申请证书或放置证书</h3><p><code>cd /etc/trojan-go</code>进入 /etc/trojan-go 目录， 用Trojan-Go申请证书，或是自行放置证书</p>
-<pre><code>./trojan-go -autocert request</code></pre><p><img src="https://www.v2rayssr.com/wp-content/uploads/2020/06/%E6%88%AA%E5%B1%8F2020-06-02-%E4%B8%8B%E5%8D%889.23.36.png" alt="img"></p>
-<p>分别输入：y/你的域名/你的邮箱（不需要验证）/y ，申请完毕如下图（请比对文件夹里面的文件）</p>
+<pre><code>./trojan-go -autocert request</code></pre><p>分别输入：y/你的域名/你的邮箱（不需要验证）/y ，申请完毕如下图（请比对文件夹里面的文件）</p>
 <p>PS：若是域名输入错误，需要再次运行则需删除 <code>/etc/trojan-go/domain_info.json</code> 文件。</p>
-<p><img src="https://www.v2rayssr.com/wp-content/uploads/2020/06/%E6%88%AA%E5%B1%8F2020-06-02-%E4%B8%8B%E5%8D%889.31.56.png" alt="img"></p>
 <h3 id="5、配置Trojan-Go"><a href="#5、配置Trojan-Go" class="headerlink" title="5、配置Trojan-Go"></a>5、配置Trojan-Go</h3><p>1、修改服务器配置文件和增加自启动文件</p>
 <pre><code>cp /etc/trojan-go/example/server.json /etc/trojan-go</code></pre><p>2、复制 trojan-go.service 到 /etc/systemd/system</p>
 <pre><code>cp /etc/trojan-go/example/trojan-go.service /etc/systemd/system</code></pre><p>3、找到 /etc/systemd/system/trojan-go.service 文件，修改里面的代码和参数为：</p>
@@ -627,12 +624,9 @@ WantedBy=multi-user.target</code></pre><p>4、修改 /etc/trojan-go/server.json 
 <pre><code>&quot;websocket&quot;` 默认开启，关闭请 `&quot;enabled&quot;: false,</code></pre><p>若是不关闭，则只能使用包含 Trojan-GO 协议的客户端。但是关闭则无法套用CDN</p>
 <p><code>&quot;obfuscation_password&quot;: &quot;&quot;</code>, 为 websocket 混淆密码，填写会稍稍影响性能，默认为空</p>
 <pre><code>&quot;mux&quot;` 为多路复用，默认开启，关闭请 `&quot;enabled&quot;: false,
-&quot;double_tls&quot;:` 为多重TLS，默认开启，关闭请 `&quot;double_tls&quot;: false,</code></pre><h3 id="6、开启CDN，并设置CDN"><a href="#6、开启CDN，并设置CDN" class="headerlink" title="6、开启CDN，并设置CDN"></a>6、开启CDN，并设置CDN</h3><p>1、点亮小云朵，开启CDN，如下图：</p>
-<p><img src="https://www.v2rayssr.com/wp-content/uploads/2020/06/%E6%88%AA%E5%B1%8F2020-06-02-%E4%B8%8B%E5%8D%889.52.52.png" alt="img"></p>
-<p>2、点击页面中的 SSL/TLS 进入如下界面并设置如图所示：（<strong>重要</strong>）</p>
-<p><img src="https://www.v2rayssr.com/wp-content/uploads/2020/06/%E6%88%AA%E5%B1%8F2020-06-02-%E4%B8%8B%E5%8D%889.54.29.png" alt="img"></p>
+&quot;double_tls&quot;:` 为多重TLS，默认开启，关闭请 `&quot;double_tls&quot;: false,</code></pre><h3 id="6、开启CDN，并设置CDN"><a href="#6、开启CDN，并设置CDN" class="headerlink" title="6、开启CDN，并设置CDN"></a>6、开启CDN，并设置CDN</h3><p>1、点亮小云朵，开启CDN</p>
+<p>2、点击页面中的 SSL/TLS 进入如下界面并设置（<strong>重要</strong>）</p>
 <h3 id="7、设置Trojan-Go开机启动"><a href="#7、设置Trojan-Go开机启动" class="headerlink" title="7、设置Trojan-Go开机启动"></a>7、设置Trojan-Go开机启动</h3><p>首先 <code>systemctl daemon-reload</code> ，然后 <code>systemctl enable trojan-go</code> 设置为开机自启，在然后 <code>systemctl start trojan-go</code> 启动 Trojan-Go。<code>systemctl status trojan-go</code> 可以查看 Trojan-Go 状态</p>
-<p><img src="https://www.v2rayssr.com/wp-content/uploads/2020/06/%E6%88%AA%E5%B1%8F2020-06-02-%E4%B8%8B%E5%8D%8810.23.35.png" alt="img"></p>
 <h3 id="8、验证Trojan-Go是否正常"><a href="#8、验证Trojan-Go是否正常" class="headerlink" title="8、验证Trojan-Go是否正常"></a>8、验证Trojan-Go是否正常</h3><p>以下引用官方文档：</p>
 <p>当一个客户端试图连接Trojan-Go的监听端口时，会发生下面的事情：</p>
 <ul>
@@ -641,8 +635,7 @@ WantedBy=multi-user.target</code></pre><p>4、修改 /etc/trojan-go/server.json 
 <li>如果TLS握手失败，说明对方使用的不是TLS协议进行连接。此时Trojan-Go将这个TCP连接代理到本地127.0.0.1:1234上运行的HTTPS服务，返回一个展示400 Bad Reqeust的HTTP页面。<code>fallback_port</code>是一个可选选项，如果没有填写，Trojan-Go会直接终止连接。虽然是可选的，但是还是强烈建议填写。</li>
 </ul>
 <p>你可以通过使用浏览器访问你的域名<code>https://your-domain-name.com</code>来验证。如果工作正常，你的浏览器会显示一个正常的HTTPS保护的Web页面，页面内容与服务器本机80端口上的页面一致。</p>
-<h3 id="9、连接Trojan-Go"><a href="#9、连接Trojan-Go" class="headerlink" title="9、连接Trojan-Go"></a>9、连接Trojan-Go</h3><p><img src="https://www.v2rayssr.com/wp-content/uploads/2020/06/%E6%88%AA%E5%B1%8F2020-06-02-%E4%B8%8B%E5%8D%8810.22.35.png" alt="img"></p>
-<p><img src="https://www.v2rayssr.com/wp-content/uploads/2020/06/%E6%88%AA%E5%B1%8F2020-06-02-%E4%B8%8B%E5%8D%8810.29.57.png" alt="img"></p>
+<h3 id="9、连接Trojan-Go"><a href="#9、连接Trojan-Go" class="headerlink" title="9、连接Trojan-Go"></a>9、连接Trojan-Go</h3><p>trojan-qt5  </p>
 <h3 id="10、设置伪装站点"><a href="#10、设置伪装站点" class="headerlink" title="10、设置伪装站点"></a>10、设置伪装站点</h3><p>PS：等部署完毕，确定没问题了在进行站点伪装</p>
 <p>找到VPS文件 <code>/etc/nginx/nginx.conf</code> 打开，并贴入一下代码，其中文字部分需替换 （一处替换）</p>
 <pre><code>user  root;
@@ -703,7 +696,7 @@ systemctl restart nginx</code></pre><p>伪装站点千篇一律？以下模板�
         &quot;fallback_port&quot;: 1234
     }
 }</code></pre><p><code>systemctl restart trojan-go</code> 重启 Trojan-Go。<code>systemctl status trojan-go</code> 可以查看 Trojan-Go 状态</p>
-<p><a href="https://www.v2rayssr.com/trojan-go.html" target="_blank" rel="noopener">https://www.v2rayssr.com/trojan-go.html</a>  原文链接 大陆禁止访问</p>
+<p><a href="https://www.v2rayssr.com/trojan-go.html" target="_blank" rel="noopener">https://www.v2rayssr.com/trojan-go.html</a>  原文链接 大陆禁访问</p>
 
             </div>
             <hr/>
@@ -1329,7 +1322,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.4k</span>&nbsp;字
+                class="white-color">7.5k</span>&nbsp;字
             
             
             
