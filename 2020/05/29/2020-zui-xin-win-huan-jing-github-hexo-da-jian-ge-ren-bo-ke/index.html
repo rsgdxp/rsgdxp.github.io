@@ -449,14 +449,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-01
+                    2020-06-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.2k
                 </div>
                 
 
@@ -543,7 +543,14 @@
 <p><code>git clone -b develop https://github.com/blinkfox/hexo-theme-matery.git # 最新版</code></p>
 <p>本次我选的最新版 预览：<a href="https://rsgdxp.github.io/">https://rsgdxp.github.io/</a></p>
 <p>然后修改<code>Hexo</code>的配置文件，让<code>Hexo</code>使用我们下载的主题来生成博客。找到<code>博客</code>根目录下的<code>_config.yml</code>文件，将其中的<code>theme: landscape</code>改为<code>theme: hexo-theme-matery</code></p>
-<p><em>这里注意：如果改完报错 can not read a block mapping entry 请参考我的另一同名文章</em></p>
+<p><em>这里注意：如果改完报错 can not read a block mapping entry</em> </p>
+<blockquote>
+<p>修改 根目录下的_config.yml文件 后 报这个错</p>
+<p>查了半天 冒号后面要有空格；还有说的用中文双引号；还有的说文件编码问题……</p>
+<p>突然看到一条网友回复：</p>
+<p>还有报下一行的错其实是上一行出问题了。。。</p>
+<p>擦 怪不得我修改报错那行半天 怎么改怎么不行，删除还是报错下一行……</p>
+</blockquote>
 <p>然后在终端里面执行下面的命令：</p>
 <pre class=" language-bash"><code class="language-bash">hexo clean
 hexo g
@@ -915,27 +922,22 @@ description: 附加一段文章摘要，字数最好在140字以内，会出现�
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/29/can-not-read-a-block-mapping-entry-bao-cuo/">
+                <a href="/2020/05/29/2020-zui-xin-win-huan-jing-github-hexo-da-jian-ge-ren-bo-ke/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/35.jpg" class="responsive-img" alt="can not read a block mapping entry 报错">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="2020最新WIN环境github + hexo搭建个人博客">
                         
-                        <span class="card-title">can not read a block mapping entry 报错</span>
+                        <span class="card-title">2020最新WIN环境github + hexo搭建个人博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记第一 个坑
-修改 根目录下的_config.yml文件 后 报这个错
-查了半天 冒号后面要有空格；还有说的用中文双引号；还有的说文件编码问题……
-突然看到一条网友回复：
-还有报下一行的错其实是上一行出问题了。。。
-擦 怪不得我修改报错那行
+                            1.前言及Hexo介绍昨天youtube看到hugo,搭建了有点问题，搜索时又看到了hexo 其实之前查资料时也看到了解过，一搜索参考几篇文章就有了这个站点，但是参考文章里要么github里有变化，要么步骤上有不全不详细的地方，总之没有给初
                         
                     </div>
                     <div class="publish-info">
@@ -944,17 +946,30 @@ description: 附加一段文章摘要，字数最好在140字以内，会出现�
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            rsgdxp
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                    经验分享
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/hexo/">
                         <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
+                    </a>
+                    
+                    <a href="/tags/blog/">
+                        <span class="chip bg-color">blog</span>
                     </a>
                     
                 </div>
@@ -1198,7 +1213,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4k</span>&nbsp;字
+                class="white-color">4.7k</span>&nbsp;字
             
             
             
