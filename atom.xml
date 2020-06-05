@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rsgdxp.github.io/"/>
-  <updated>2020-06-05T03:20:37.705Z</updated>
+  <updated>2020-06-05T07:18:43.630Z</updated>
   <id>https://rsgdxp.github.io/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSPanel-Uim v2ray-poseidon docker 后端对接</title>
+    <link href="https://rsgdxp.github.io/2020/06/05/sspanel-uim-v2ray-poseidon-docker-hou-duan-dui-jie/"/>
+    <id>https://rsgdxp.github.io/2020/06/05/sspanel-uim-v2ray-poseidon-docker-hou-duan-dui-jie/</id>
+    <published>2020-06-05T07:17:08.000Z</published>
+    <updated>2020-06-05T07:18:43.630Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SSPanel-Uim    v2ray-poseidon 后端对接  &lt;/p&gt;
+&lt;h2 id=&quot;v2ray-poseidon&quot;&gt;&lt;a href=&quot;#v2ray-poseidon&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="docker" scheme="https://rsgdxp.github.io/tags/docker/"/>
+    
+      <category term="v2ray" scheme="https://rsgdxp.github.io/tags/v2ray/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>django-sspanel docker 安装教程</title>
+    <link href="https://rsgdxp.github.io/2020/06/05/django-sspanel-docker-an-zhuang-jiao-cheng/"/>
+    <id>https://rsgdxp.github.io/2020/06/05/django-sspanel-docker-an-zhuang-jiao-cheng/</id>
+    <published>2020-06-05T07:13:34.000Z</published>
+    <updated>2020-06-05T07:15:22.450Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;安装docker&quot;&gt;&lt;a href=&quot;#安装docker&quot; class=&quot;headerlink&quot; title=&quot;安装docker&quot;&gt;&lt;/a&gt;安装docker&lt;/h2&gt;&lt;p&gt;根据自己的系统&lt;br&gt; 这里是centos 7 64&lt;br&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="docker" scheme="https://rsgdxp.github.io/tags/docker/"/>
+    
+      <category term="sspanel" scheme="https://rsgdxp.github.io/tags/sspanel/"/>
+    
+  </entry>
   
   <entry>
     <title>v2board 网络加速</title>

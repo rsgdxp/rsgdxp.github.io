@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="代码块显示有问题？, rsgdxp&#39;s blog">
+    <meta name="keywords" content="SSPanel-Uim v2ray-poseidon docker 后端对接, rsgdxp&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>代码块显示有问题？ | rsgdxp&#39;s blog</title>
+    <title>SSPanel-Uim v2ray-poseidon docker 后端对接 | rsgdxp&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -292,7 +292,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">代码块显示有问题？</h1>
+                    <h1 class="description center-align post-title">SSPanel-Uim v2ray-poseidon docker 后端对接</h1>
                 </div>
             </div>
         </div>
@@ -409,8 +409,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/code/">
-                                <span class="chip bg-color">code</span>
+                            <a href="/tags/docker/">
+                                <span class="chip bg-color">docker</span>
+                            </a>
+                        
+                            <a href="/tags/v2ray/">
+                                <span class="chip bg-color">v2ray</span>
                             </a>
                         
                     </div>
@@ -434,28 +438,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-31
+                    2020-06-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-01
+                    2020-06-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    119
+                    470
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -470,20 +474,32 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="为什么代码块显示有问题？"><a href="#为什么代码块显示有问题？" class="headerlink" title="为什么代码块显示有问题？"></a>为什么代码块显示有问题？</h2><p>代码要显示正确，要注意以下几个点：</p>
-<ul>
-<li><p>根目录<code>_config.yml</code>文件下的<code>highlight</code>中的<code>line_number</code>要设置为<code>false</code>，因为行号有bug，当然如果你按照上面教程修复了bug，就可以改成<code>true</code>。</p>
-</li>
-<li><p>不要按照网上教程安装<code>kramed</code>插件，已经装了的卸载掉。</p>
-</li>
-<li><p>修改</p>
-<pre><code>node_modules/marked/lib/marked.js</code></pre><p>文件中的</p>
-<pre><code>escape</code></pre><p>和</p>
-<pre><code>em</code></pre><p>两行（在538行左右），改成下面：</p>
-</li>
-</ul>
-<pre class=" language-json"><code class="language-json">  escape<span class="token operator">:</span> /^\\(<span class="token punctuation">[</span>`*\<span class="token punctuation">[</span>\<span class="token punctuation">]</span>(<span class="token punctuation">)</span>#$+\-.!_><span class="token punctuation">]</span><span class="token punctuation">)</span>/<span class="token punctuation">,</span>
-  em<span class="token operator">:</span> /^\*((?<span class="token operator">:</span>\*\*|<span class="token punctuation">[</span>\s\S<span class="token punctuation">]</span><span class="token punctuation">)</span>+?<span class="token punctuation">)</span>\*(?!\*<span class="token punctuation">)</span>/<span class="token punctuation">,</span></code></pre>
+                <p>SSPanel-Uim    v2ray-poseidon 后端对接  </p>
+<h2 id="v2ray-poseidon"><a href="#v2ray-poseidon" class="headerlink" title="v2ray-poseidon"></a>v2ray-poseidon</h2><p>v2ray-poseidon能对接 SSPanel 跟 v2board ，有分社区版跟商业版。这两种版本的区别就是前者只能 50 个用户以下使用，后者无限制。<br> <a href="https://www.54fxp.top/go?url=https://github.com/ColetteContreras/v2ray-poseidon/wiki/0202-对接-SSPanel-教程" target="_blank" rel="noopener">官方文档</a></p>
+<p>准备工作就是CF解析域名。打开VPS。</p>
+<h2 id="修改-SSPanel-代码"><a href="#修改-SSPanel-代码" class="headerlink" title="修改 SSPanel 代码"></a>修改 SSPanel 代码</h2><p>我的是master 分支</p>
+<blockquote>
+<p>master 分支的代码<br> 删除掉 app/Middleware/Mod_Mu.php 的 33 到 39 行的内容 <a href="https://www.54fxp.top/go?url=https://github.com/Anankke/SSPanel-Uim/blob/master/app/Middleware/Mod_Mu.php#L33-L39" target="_blank" rel="noopener">https://github.com/Anankke/SSPanel-Uim/blob/master/app/Middleware/Mod_Mu.php#L33-L39</a></p>
+</blockquote>
+<h2 id="方式一-在-docker-中运行-v2ray-poseidon"><a href="#方式一-在-docker-中运行-v2ray-poseidon" class="headerlink" title="方式一 在 docker 中运行 v2ray-poseidon"></a>方式一 在 docker 中运行 v2ray-poseidon</h2><p>本文使用这种方式。<br> <strong>安装 docker 和 docker-compose</strong></p>
+<pre><code>curl -fsSL https://get.docker.com | bash`
+ `curl -L  &quot;https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose`
+ `chmod a+x /usr/local/bin/docker-compose`
+ `rm -rf `which dc``
+ `ln -s /usr/local/bin/docker-compose /usr/bin/dc`
+ `git clone https://github.com/ColetteContreras/v2ray-poseidon.git`
+ `cd /root/v2ray-poseidon/docker/sspanel/ws-tls</code></pre><p><strong>修改 config.json</strong></p>
+<p>nodeId ：节点 Id<br> panelUrl ：$_ENV[‘baseUrl’]<br> panelKey ：$_ENV[‘muKey’]</p>
+<p><strong>修改 docker-compose.yml</strong></p>
+<p>CF_API_EMAIL=你的 Cloudflare 邮箱<br> CF_API_KEY=你的 Cloudflare Global API Key<br> command: tls cloudflare 域名 ，并删掉前面的 #</p>
+<h2 id="SSPANEL里新建节点"><a href="#SSPANEL里新建节点" class="headerlink" title="SSPANEL里新建节点"></a>SSPANEL里新建节点</h2><p>WS + TLS<br> <code>域名;443;2;tls;ws;path=/|host=域名</code></p>
+<h2 id="最后启动"><a href="#最后启动" class="headerlink" title="最后启动"></a>最后启动</h2><pre><code>dc up -d`
+ 我测试时，使用TCP，节点绿色，联网不成功，换端口还是一样，未解决。
+ 使用过TCP DC UP的，会报错，只需要停止就可以了
+ `docker-compose stop</code></pre><p>另外，好多报错啥的，查看官方文档，自己google，我这小白水平，有问题任何人都是搜索解决问题一般。</p>
+<h2 id="最后测试"><a href="#最后测试" class="headerlink" title="最后测试"></a>最后测试</h2><p>订阅或者复制节点链接，OK，速度很快，其它可以考虑加速脚本。</p>
+<hr>
+<p>靓时代网站<a href="http://www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权">www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权</a><br>转载请注明原文链接：<a href="https://www.54fxp.top/940.html" target="_blank" rel="noopener">SSPanel-Uim  v2ray-poseidon docker 后端对接</a></p>
 
             </div>
             <hr/>
@@ -509,7 +525,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rsgdxp.github.io/2020/05/31/dai-ma-kuai-xian-shi-you-wen-ti/">https://rsgdxp.github.io/2020/05/31/dai-ma-kuai-xian-shi-you-wen-ti/</a>
+                    <a href="https://rsgdxp.github.io/2020/06/05/sspanel-uim-v2ray-poseidon-docker-hou-duan-dui-jie/">https://rsgdxp.github.io/2020/06/05/sspanel-uim-v2ray-poseidon-docker-hou-duan-dui-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -547,8 +563,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/code/">
-                                    <span class="chip bg-color">code</span>
+                                <a href="/tags/docker/">
+                                    <span class="chip bg-color">docker</span>
+                                </a>
+                            
+                                <a href="/tags/v2ray/">
+                                    <span class="chip bg-color">v2ray</span>
                                 </a>
                             
                         </div>
@@ -719,7 +739,7 @@
         repo: 'rsgdxp.github.io',
         owner: 'rsgdxp',
         admin: "rsgdxp",
-        id: '2020-05-31T15-52-03',
+        id: '2020-06-05T15-17-08',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -743,30 +763,31 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/31/shi-yong-hexo-d-ming-ling-yi-chang-you-should-configure-deployment-settings-in-config-yml-first/">
+                <a href="/2020/06/05/sspanel-uim-v2ray-poseidon-docker-hou-duan-dui-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="使用 hexo d 命令异常：You should configure deployment settings in _config.yml first! ...">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="SSPanel-Uim v2ray-poseidon docker 后端对接">
                         
-                        <span class="card-title">使用 hexo d 命令异常：You should configure deployment settings in _config.yml first! ...</span>
+                        <span class="card-title">SSPanel-Uim v2ray-poseidon docker 后端对接</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1:排查是否安装一下hexo-deployer-git这个模块没有安的话装使用指令安装:npm install hexo-deployer-git --save
-2:检查deploy: 下面的节点 如type:这些 需要缩进。 之前是这种格
+                            SSPanel-Uim    v2ray-poseidon 后端对接  
+v2ray-poseidonv2ray-poseidon能对接 SSPanel 跟 v2board ，有分社区版跟商业版。这两种版本的区别就是前者只能 50 个用户以
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -779,11 +800,16 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
+                    </a>
+                    
+                    <a href="/tags/v2ray/">
+                        <span class="chip bg-color">v2ray</span>
                     </a>
                     
                 </div>
@@ -797,24 +823,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/29/2020-zui-xin-win-huan-jing-github-hexo-da-jian-ge-ren-bo-ke/">
+                <a href="/2020/06/05/django-sspanel-docker-an-zhuang-jiao-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="2020最新WIN环境github + hexo搭建个人博客">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="django-sspanel docker 安装教程">
                         
-                        <span class="card-title">2020最新WIN环境github + hexo搭建个人博客</span>
+                        <span class="card-title">django-sspanel docker 安装教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.前言及Hexo介绍昨天youtube看到hugo,搭建了有点问题，搜索时又看到了hexo 其实之前查资料时也看到了解过，一搜索参考几篇文章就有了这个站点，但是参考文章里要么github里有变化，要么步骤上有不全不详细的地方，总之没有给初
+                            安装docker根据自己的系统 这里是centos 7 64 先
+
+yum update -y yum install -y curl vim wget  git
+
+安装docker 和 docker-compose
+
+curl -fsSL
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-05
                             </span>
                         <span class="publish-author">
                             
@@ -831,16 +863,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
                     </a>
                     
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
-                    </a>
-                    
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
+                    <a href="/tags/sspanel/">
+                        <span class="chip bg-color">sspanel</span>
                     </a>
                     
                 </div>

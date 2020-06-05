@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>SSPanel-Uim v2ray-poseidon docker 后端对接</title>
+      <link href="/2020/06/05/sspanel-uim-v2ray-poseidon-docker-hou-duan-dui-jie/"/>
+      <url>/2020/06/05/sspanel-uim-v2ray-poseidon-docker-hou-duan-dui-jie/</url>
+      
+        <content type="html"><![CDATA[<p>SSPanel-Uim    v2ray-poseidon 后端对接  </p><h2 id="v2ray-poseidon"><a href="#v2ray-poseidon" class="headerlink" title="v2ray-poseidon"></a>v2ray-poseidon</h2><p>v2ray-poseidon能对接 SSPanel 跟 v2board ，有分社区版跟商业版。这两种版本的区别就是前者只能 50 个用户以下使用，后者无限制。<br> <a href="https://www.54fxp.top/go?url=https://github.com/ColetteContreras/v2ray-poseidon/wiki/0202-对接-SSPanel-教程" target="_blank" rel="noopener">官方文档</a></p><p>准备工作就是CF解析域名。打开VPS。</p><h2 id="修改-SSPanel-代码"><a href="#修改-SSPanel-代码" class="headerlink" title="修改 SSPanel 代码"></a>修改 SSPanel 代码</h2><p>我的是master 分支</p><blockquote><p>master 分支的代码<br> 删除掉 app/Middleware/Mod_Mu.php 的 33 到 39 行的内容 <a href="https://www.54fxp.top/go?url=https://github.com/Anankke/SSPanel-Uim/blob/master/app/Middleware/Mod_Mu.php#L33-L39" target="_blank" rel="noopener">https://github.com/Anankke/SSPanel-Uim/blob/master/app/Middleware/Mod_Mu.php#L33-L39</a></p></blockquote><h2 id="方式一-在-docker-中运行-v2ray-poseidon"><a href="#方式一-在-docker-中运行-v2ray-poseidon" class="headerlink" title="方式一 在 docker 中运行 v2ray-poseidon"></a>方式一 在 docker 中运行 v2ray-poseidon</h2><p>本文使用这种方式。<br> <strong>安装 docker 和 docker-compose</strong></p><pre><code>curl -fsSL https://get.docker.com | bash` `curl -L  &quot;https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose` `chmod a+x /usr/local/bin/docker-compose` `rm -rf `which dc`` `ln -s /usr/local/bin/docker-compose /usr/bin/dc` `git clone https://github.com/ColetteContreras/v2ray-poseidon.git` `cd /root/v2ray-poseidon/docker/sspanel/ws-tls</code></pre><p><strong>修改 config.json</strong></p><p>nodeId ：节点 Id<br> panelUrl ：$_ENV[‘baseUrl’]<br> panelKey ：$_ENV[‘muKey’]</p><p><strong>修改 docker-compose.yml</strong></p><p>CF_API_EMAIL=你的 Cloudflare 邮箱<br> CF_API_KEY=你的 Cloudflare Global API Key<br> command: tls cloudflare 域名 ，并删掉前面的 #</p><h2 id="SSPANEL里新建节点"><a href="#SSPANEL里新建节点" class="headerlink" title="SSPANEL里新建节点"></a>SSPANEL里新建节点</h2><p>WS + TLS<br> <code>域名;443;2;tls;ws;path=/|host=域名</code></p><h2 id="最后启动"><a href="#最后启动" class="headerlink" title="最后启动"></a>最后启动</h2><pre><code>dc up -d` 我测试时，使用TCP，节点绿色，联网不成功，换端口还是一样，未解决。 使用过TCP DC UP的，会报错，只需要停止就可以了 `docker-compose stop</code></pre><p>另外，好多报错啥的，查看官方文档，自己google，我这小白水平，有问题任何人都是搜索解决问题一般。</p><h2 id="最后测试"><a href="#最后测试" class="headerlink" title="最后测试"></a>最后测试</h2><p>订阅或者复制节点链接，OK，速度很快，其它可以考虑加速脚本。</p><hr><p>靓时代网站<a href="http://www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权">www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权</a><br>转载请注明原文链接：<a href="https://www.54fxp.top/940.html" target="_blank" rel="noopener">SSPanel-Uim  v2ray-poseidon docker 后端对接</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> v2ray </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>django-sspanel docker 安装教程</title>
+      <link href="/2020/06/05/django-sspanel-docker-an-zhuang-jiao-cheng/"/>
+      <url>/2020/06/05/django-sspanel-docker-an-zhuang-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>根据自己的系统<br> 这里是centos 7 64<br> 先</p><blockquote><p>yum update -y<br> yum install -y curl vim wget  git</p></blockquote><p>安装docker 和 docker-compose</p><blockquote><p>curl -fsSL <a href="https://www.54fxp.top/go?url=https://get.docker.com" target="_blank" rel="noopener">https://get.docker.com</a> | bash<br> curl -L “<a href="https://www.54fxp.top/go?url=https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname" target="_blank" rel="noopener">https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname</a> -s)-$(uname -m)” -o /usr/local/bin/docker-compose<br> chmod a+x /usr/local/bin/docker-compose<br> # 创建个软链接，以后用 dc 命令来代替 docker-compose<br> rm -rf <code>which dc</code>  # 若系统中存在 dc 则删除，这个 dc 就是个计算器，完全没有用<br> ln -s /usr/local/bin/docker-compose /usr/bin/dc</p></blockquote><h2 id="下载django-sspanel-源码"><a href="#下载django-sspanel-源码" class="headerlink" title="下载django-sspanel 源码"></a>下载django-sspanel 源码</h2><pre><code>git clone https://github.com/Ehco1996/django-sspanel.git</code></pre><p><strong>进入项目根目录</strong><br> <code>cd django-sspanel</code></p><p># 收集静态资源<br> <code>docker-compose run --rm web python manage.py collectstatic --noinput</code></p><p># 创建数据库表<br> <code>docker-compose run --rm web python manage.py migrate</code></p><p># 创建超级用户账号<br> <code>docker-compose run --rm web python manage.py create_admin --email &quot;admin@ss.com&quot; --username &quot;admin1&quot; --password &quot;adminadmin&quot;</code></p><p># 开启程序并放在后台运行<br> <code>docker-compose up -d</code></p><h2 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h2><pre><code>systemctl enable dockersystemctl start docker</code></pre><p>django-sspanel/configs里<br> <strong>自行修改配置！</strong><br> <strong>自行修改配置！</strong><br> <strong>自行修改配置！</strong></p><h2 id="常见错误及解决"><a href="#常见错误及解决" class="headerlink" title="常见错误及解决"></a>常见错误及解决</h2><p>提示internal  server error 等等</p><p>您暂时无权查看此隐藏内容！</p><p><strong>本站 搭建的演示站点：</strong></p><p><a href="https://www.54fxp.top/go?url=http://www.fxpjc.xyz/" target="_blank" rel="noopener">http://www.fxpjc.xyz/</a></p><p><a href="https://www.54fxp.top/go?url=https://imgchr.com/i/YB6jZn" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/14/YB6jZn.md.png" alt="django-sspanel docker 安装教程"></a></p><p>以上隐藏内容查看价格为100靓时代币<a href="https://www.54fxp.top/wp-content/plugins/erphpdown/icealipay-pay-center.php?postid=946" target="_blank" rel="noopener">立即购买</a></p><p>1元等于10靓时代币。购买流程：1.首先登录本站（可微信QQ登录，可注册账号邮箱验证登录）2.登录状态，点 绿色 立即购买，余额有靓时代币直接支付；否则 点击充值  进入个人中心页面，可以充值卡充值，充值卡购买地址：<a href="https://xp.rsgdxp.com，可以使用微信扫码支付、支付宝WEB支付；充值包月会员等更优惠！" target="_blank" rel="noopener">https://xp.rsgdxp.com，可以使用微信扫码支付、支付宝WEB支付；充值包月会员等更优惠！</a></p><hr><p>靓时代网站<a href="http://www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权">www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权</a><br>转载请注明原文链接：<a href="https://www.54fxp.top/946.html" target="_blank" rel="noopener">django-sspanel docker 安装教程</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> sspanel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>v2board 网络加速</title>
       <link href="/2020/06/05/v2board-wang-luo-jia-su/"/>
       <url>/2020/06/05/v2board-wang-luo-jia-su/</url>
