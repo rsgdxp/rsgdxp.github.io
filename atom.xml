@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rsgdxp.github.io/"/>
-  <updated>2020-06-05T03:51:29.374Z</updated>
+  <updated>2020-06-05T03:20:37.705Z</updated>
   <id>https://rsgdxp.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test test test</title>
-    <link href="https://rsgdxp.github.io/2020/06/05/test-test-test/"/>
-    <id>https://rsgdxp.github.io/2020/06/05/test-test-test/</id>
-    <published>2020-06-05T03:51:29.000Z</published>
-    <updated>2020-06-05T03:51:29.374Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="a" scheme="https://rsgdxp.github.io/tags/a/"/>
-    
-      <category term="b" scheme="https://rsgdxp.github.io/tags/b/"/>
-    
-  </entry>
   
   <entry>
     <title>v2board 网络加速</title>
@@ -63,38 +42,6 @@
       <category term="v2board" scheme="https://rsgdxp.github.io/tags/v2board/"/>
     
       <category term="网络加速" scheme="https://rsgdxp.github.io/tags/%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MDx 文档 短代码 摘要</title>
-    <link href="https://rsgdxp.github.io/2020/06/05/mdx-wen-dang-duan-dai-ma-zhai-yao/"/>
-    <id>https://rsgdxp.github.io/2020/06/05/mdx-wen-dang-duan-dai-ma-zhai-yao/</id>
-    <published>2020-06-05T02:48:55.000Z</published>
-    <updated>2020-06-05T03:44:05.161Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;MDX是什么？&lt;/p&gt;
-&lt;p&gt;WP主题。&lt;/p&gt;
-&lt;p&gt;MDX主题是什么样子的？示例下面：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://fxp.54fxp.top/?p=20&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="MDX" scheme="https://rsgdxp.github.io/tags/MDX/"/>
-    
-      <category term="代码" scheme="https://rsgdxp.github.io/tags/%E4%BB%A3%E7%A0%81/"/>
     
   </entry>
   
