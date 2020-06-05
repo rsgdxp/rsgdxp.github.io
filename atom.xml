@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rsgdxp.github.io/"/>
-  <updated>2020-06-05T07:18:43.630Z</updated>
+  <updated>2020-06-05T11:18:39.048Z</updated>
   <id>https://rsgdxp.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Trojan+CDN Trojan-Go安装 隐藏VPS IP</title>
+    <link href="https://rsgdxp.github.io/2020/06/05/trojan-cdn-trojan-go-an-zhuang-yin-cang-vps-ip/"/>
+    <id>https://rsgdxp.github.io/2020/06/05/trojan-cdn-trojan-go-an-zhuang-yin-cang-vps-ip/</id>
+    <published>2020-06-05T11:10:40.000Z</published>
+    <updated>2020-06-05T11:18:39.048Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Trojan-Go套用CDN、隐藏VPS真实IP、开启websocket、多路复用提升网页打开速度！Trojan-Go安装脚本（可救被墙的VPS）&lt;/p&gt;
+&lt;p&gt;Trojan-Go的官方说明：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用Go实现的完整Trojan代理，与T
+        
+      
+    
+    </summary>
+    
+    
+      <category term="转载记录" scheme="https://rsgdxp.github.io/categories/%E8%BD%AC%E8%BD%BD%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="trojan" scheme="https://rsgdxp.github.io/tags/trojan/"/>
+    
+      <category term="trojan-go" scheme="https://rsgdxp.github.io/tags/trojan-go/"/>
+    
+      <category term="CDN" scheme="https://rsgdxp.github.io/tags/CDN/"/>
+    
+      <category term="vps" scheme="https://rsgdxp.github.io/tags/vps/"/>
+    
+  </entry>
   
   <entry>
     <title>SSPanel-Uim v2ray-poseidon docker 后端对接</title>
