@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Android - Surfboard 使用教程</title>
+      <link href="/2020/06/12/android-surfboard-shi-yong-jiao-cheng/"/>
+      <url>/2020/06/12/android-surfboard-shi-yong-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Android-Surfboard-使用教程"><a href="#Android-Surfboard-使用教程" class="headerlink" title="Android - Surfboard 使用教程"></a>Android - Surfboard 使用教程</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Surfboard 是一款运行在 Android 系统上的网络代理工具，兼容 Surge 2 配置，可以直接将 Surge 2 标准的配置文件导入使用。</p><p>支持 SS 协议，不支持 SSR 和 V2Ray 。</p><h3 id="此教程整理时的系统环境："><a href="#此教程整理时的系统环境：" class="headerlink" title="此教程整理时的系统环境："></a>此教程整理时的系统环境：</h3><p>Android 9, Color OS V6.0</p><p>Surfboard 1.0.3 (Build 54)</p><p>此文档适用于：<code>N3RO</code><br>N3RO 机场用户需要自行转换为 Surfboard 接受的订阅格式。<br>详情请看机场官网用户中心快速导入区域。<br>文档中的某些内容可能随软件版本迭代而失效。</p><h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><p>请点击<a href="https://to.kache.moe/source/Surfboard-1.0.3.apk" target="_blank" rel="noopener">这里</a>以下载最新的Surfboard软件。</p><h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><p>软件提供了多种配置导入方法，进入 Profile 页面：</p><ul><li>可以填入 URL 导入</li><li>也可以下载配置文件后，选择导入本地文件</li></ul><p>导入后，在 Config 页面会出现节点列表，选择你想要使用的节点即可。</p><p><strong>具体步骤如下:</strong></p><p>首先请登陆机场官网，复制 Surfboard 订阅链接。</p><p>请打开软件。进入 Profiles 页面。请点击右下角加号，然后选择 Download form url 。</p><p>请在弹出的新窗口中粘贴刚刚复制的订阅链接。</p><p><img src="https://merlinblog.oss-cn-hongkong.aliyuncs.com/Surfboard%E6%95%99%E7%A8%8B/IMG_7282.jpg" alt="1"> <img src="https://merlinblog.oss-cn-hongkong.aliyuncs.com/Surfboard%E6%95%99%E7%A8%8B/IMG_7283.jpg" alt="2"></p><p>请点击右下角 Download 。此时软件会开始从远端服务器下载您的配置文件。</p><p>等待若干秒后，您将在此页面看到您添加的配置文件。</p><p><img src="https://merlinblog.oss-cn-hongkong.aliyuncs.com/Surfboard%E6%95%99%E7%A8%8B/IMG_7281.jpg" alt="3"></p><p>请点击选中此卡片。然后点击下方的 Config 。您将在这个页面看到策略组面板。</p><p><img src="https://merlinblog.oss-cn-hongkong.aliyuncs.com/Surfboard%E6%95%99%E7%A8%8B/IMG_7277.jpg" alt="4"></p><p>请点开 Proxy 策略组。在其中选择一个节点。（可点击右上角 Test Latency 进行延迟测试并选中一个延迟较低的节点）</p><p>一般配置文件中会有 Auto 策略，若在 Proxy 策略组中选中 Auto，那么可以实现的效果是：每隔一段时间，软件将进行延迟测试并自动切换到延迟最低的节点。（ Use at your own risk ）</p><p><img src="https://merlinblog.oss-cn-hongkong.aliyuncs.com/Surfboard%E6%95%99%E7%A8%8B/IMG_7278.jpg" alt="5"></p><p>此时可以点击左下角的 Switch 按钮，然后点击右下角粉色的启动按钮。</p><p>初次启动会建立 VPN 隧道，请点击允许。</p><p><img src="https://merlinblog.oss-cn-hongkong.aliyuncs.com/Surfboard%E6%95%99%E7%A8%8B/IMG_7275.jpg" alt="6"> <img src="https://merlinblog.oss-cn-hongkong.aliyuncs.com/Surfboard%E6%95%99%E7%A8%8B/IMG_7276.jpg" alt="7"></p><h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><h3 id="如何更新订阅："><a href="#如何更新订阅：" class="headerlink" title="如何更新订阅："></a>如何更新订阅：</h3><p>请进入 Profile 界面，长按配置文件的卡片。然后选择 Check update 。</p><p><img src="https://merlinblog.oss-cn-hongkong.aliyuncs.com/Surfboard%E6%95%99%E7%A8%8B/IMG_7279.jpg" alt="8"></p><h3 id="已知的问题"><a href="#已知的问题" class="headerlink" title="已知的问题"></a>已知的问题</h3><p>Android Q 已知 AOSP 源码存在 fd 泄漏的 bug ，使用 Surfboard 一段时间直接导致系统重启，无法在 APP 侧修复，只能等待系统更新，请在 Android Q 上谨慎使用。</p><blockquote><p>Last updated: 2020-02-12 23:30:18<br>这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="https://wiki.kache.moe/2019/11/22/Andoird-Surfboard/" target="_blank" rel="noopener">http://wiki.kache.moe/2019/11/22/Andoird-Surfboard/</a></p></blockquote><p>转载自以上链接！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> android </tag>
+            
+            <tag> surfboard </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Trojan+CDN Trojan-Go安装 隐藏VPS IP</title>
       <link href="/2020/06/05/trojan-cdn-trojan-go-an-zhuang-yin-cang-vps-ip/"/>
       <url>/2020/06/05/trojan-cdn-trojan-go-an-zhuang-yin-cang-vps-ip/</url>
