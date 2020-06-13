@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Centos 7 Nginx安装与配置</title>
+      <link href="/2020/06/13/centos-7-nginx-an-zhuang-yu-pei-zhi/"/>
+      <url>/2020/06/13/centos-7-nginx-an-zhuang-yu-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Nginx简介"><a href="#Nginx简介" class="headerlink" title="Nginx简介"></a>Nginx简介</h2><p>Nginx是一款高性能免费开源网页服务器，也可用于反向代理和负载均衡服务器。该软件由伊戈尔·赛索耶夫于2004年发布，2019年3月11日，Nginx被F5 Networks以6.7亿美元收购。2019年最新统计中，全球大约有32.97%的服务器使用Nginx。在官方测试中，能够支持上万并行连接。</p><h2 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h2><h3 id="步骤1：-安装相关组件"><a href="#步骤1：-安装相关组件" class="headerlink" title="步骤1： 安装相关组件"></a>步骤1： 安装相关组件</h3><p>默认需要 <strong>zlib</strong>、<strong>openssl</strong> 和 <strong>pcre</strong> 依赖包，其他组件可以根据自己需要选择安装。输入如下命令：</p><p>#安装组件</p><p>yum -y install gcc gcc-c++ zlib zlib-devel openssl openssl-devel pcre pcre-devel</p><ul><li>gcc：编译器组件，包括C、C++等</li><li>zlib：数据压缩库</li><li>openssl：https安全传输协议，默认没有打开</li><li>pcre：正则表达式库</li></ul><h3 id="步骤2：编译安装Nginx"><a href="#步骤2：编译安装Nginx" class="headerlink" title="步骤2：编译安装Nginx"></a>步骤2：编译安装Nginx</h3><p>官方网站下载最新 <a href="https://nginx.org/en/download.html" target="_blank" rel="noopener">Nginx</a>，线上环境最好下载最新稳定版本<code>Stable version</code>。默认安装路径：<code>/usr/local/nginx</code></p><pre><code>#获取nginx。如果未安装wget，使用 yum -y install wgetwget https://nginx.org/download/nginx-1.17.1.tar.gz#解压，zxvf显示解压文件tar zxf nginx-1.17.1.tar.gz#进入nginx源文件目录cd nginx-1.17.1#编译，默认https没有打开，需要添加 --with-http_ssl_module./configure --with-http_ssl_module#安装Nginxmake &amp;&amp; make install#启动Nginx/usr/local/nginx/sbin/nginxConfiguration summary+ using system PCRE library+ OpenSSL library is not used+ using system zlib library</code></pre><p>以上信息表示 PCRE 和 zlib 使用系统库，OpenSSL 没有开启，不支持 https。</p><p>在浏览器中输入服务器地址，显示如下效果表示安装成功。</p><p><img src="https://docsxyz.com/upload/images/20190701/15619733753996.jpg" alt="Welcome to Nginx"></p><p>注意：</p><p>如果在浏览器中打不开网页，可能是被服务器的防火墙限制了。可以先关闭防火墙试试能否打开，如果关闭防火墙后能打开，可以永久开放80端口。</p><h3 id="步骤3：配置防火墙"><a href="#步骤3：配置防火墙" class="headerlink" title="步骤3：配置防火墙"></a>步骤3：配置防火墙</h3><p>Centos 7 永久开放80端口：</p><p>#查看防火墙状态</p><p>firewall-cmd –state</p><p>#关闭防火墙</p><p>systemctl stop firewalld.service</p><p>#打开防火墙</p><p>systemctl start firewalld.service</p><p>#永久开放80端口</p><p>firewall-cmd –zone=public –add-port=80/tcp –permanent</p><p>#更新防火墙规则</p><p>firewall-cmd –reload</p><p>Nginx详细启动参数参加：<a href="https://docsxyz.com/wiki/nginx/commandline" target="_blank" rel="noopener">https://docsxyz.com/wiki/nginx/commandline</a></p><p>转载 <a href="https://docsxyz.com/wiki/nginx/install" target="_blank" rel="noopener">https://docsxyz.com/wiki/nginx/install</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+            <tag> Centos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows - Clash for Windows 使用教程</title>
       <link href="/2020/06/12/windows-clash-for-windows-shi-yong-jiao-cheng/"/>
       <url>/2020/06/12/windows-clash-for-windows-shi-yong-jiao-cheng/</url>
