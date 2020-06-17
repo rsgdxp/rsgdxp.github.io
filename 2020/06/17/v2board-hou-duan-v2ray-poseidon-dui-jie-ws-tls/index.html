@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SSPanel-Uim v2ray-poseidon docker 后端对接, rsgdxp&#39;s blog">
+    <meta name="keywords" content="V2Board后端V2Ray-Poseidon对接WS+TLS, rsgdxp&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SSPanel-Uim v2ray-poseidon docker 后端对接 | rsgdxp&#39;s blog</title>
+    <title>V2Board后端V2Ray-Poseidon对接WS+TLS | rsgdxp&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SSPanel-Uim v2ray-poseidon docker 后端对接</h1>
+                    <h1 class="description center-align post-title">V2Board后端V2Ray-Poseidon对接WS+TLS</h1>
                 </div>
             </div>
         </div>
@@ -409,12 +409,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/docker/">
-                                <span class="chip bg-color">docker</span>
+                            <a href="/tags/v2board/">
+                                <span class="chip bg-color">v2board</span>
                             </a>
                         
-                            <a href="/tags/v2ray/">
-                                <span class="chip bg-color">v2ray</span>
+                            <a href="/tags/V2Ray-Poseidon/">
+                                <span class="chip bg-color">V2Ray-Poseidon</span>
                             </a>
                         
                     </div>
@@ -438,28 +438,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-05
+                    2020-06-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-05
+                    2020-06-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    470
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -474,32 +474,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>SSPanel-Uim    v2ray-poseidon 后端对接  </p>
-<h2 id="v2ray-poseidon"><a href="#v2ray-poseidon" class="headerlink" title="v2ray-poseidon"></a>v2ray-poseidon</h2><p>v2ray-poseidon能对接 SSPanel 跟 v2board ，有分社区版跟商业版。这两种版本的区别就是前者只能 50 个用户以下使用，后者无限制。<br> <a href="https://www.54fxp.top/go?url=https://github.com/ColetteContreras/v2ray-poseidon/wiki/0202-对接-SSPanel-教程" target="_blank" rel="noopener">官方文档</a></p>
-<p>准备工作就是CF解析域名。打开VPS。</p>
-<h2 id="修改-SSPanel-代码"><a href="#修改-SSPanel-代码" class="headerlink" title="修改 SSPanel 代码"></a>修改 SSPanel 代码</h2><p>我的是master 分支</p>
+                <p>原文地址：<a href="https://www.54fxp.top/903.html" target="_blank" rel="noopener">https://www.54fxp.top/903.html</a></p>
+<p>本站搭建的测试地址：<a href="https://v2.rsgdxp.com" target="_blank" rel="noopener">https://v2.rsgdxp.com</a> （兴趣技术学习交流）<br> 本次介绍 WebSocket + TLS协议的对接。后端采用的是Poseidon社区版对接，最多只允许50个用户同时在线。<br> <em><em><br> 提前准备工作：</em></em><br> cloudflare里新建域名 本次示例：v.liangdai.ga —–已修改 ；查看API 和 邮箱记录备用。<br> V2board站点里 新建节点 本次示例：4 号节点<br> <a href="https://www.54fxp.top/wp-content/uploads/2020/05/2020050206061828.png" target="_blank" rel="noopener"><img src="https://www.54fxp.top/wp-content/uploads/2020/05/2020050206061828.png" alt="V2Board后端V2Ray-Poseidon对接WS+TLS"></a></p>
+<p>开始对接：</p>
+<h2 id="1-通过SSH连接上你的Linux服务器，推荐使用CentOS7。"><a href="#1-通过SSH连接上你的Linux服务器，推荐使用CentOS7。" class="headerlink" title="1.通过SSH连接上你的Linux服务器，推荐使用CentOS7。"></a>1.通过SSH连接上你的Linux服务器，推荐使用CentOS7。</h2><h2 id="2-安装内核加速，推荐使用bbr-plus。先安装内核，选择2，重启后，开启加速，选择7。"><a href="#2-安装内核加速，推荐使用bbr-plus。先安装内核，选择2，重启后，开启加速，选择7。" class="headerlink" title="2.安装内核加速，推荐使用bbr plus。先安装内核，选择2，重启后，开启加速，选择7。"></a>2.安装内核加速，推荐使用bbr plus。先安装内核，选择2，重启后，开启加速，选择7。</h2><pre><code> wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; chmod +x tcp.sh ./tcp.sh `
+ 新环境，没有wget 安装即可：
+ `yum install wget </code></pre><h2 id="3-同步时间为北京时间。一般不需要，保险起见，还是同步一下。"><a href="#3-同步时间为北京时间。一般不需要，保险起见，还是同步一下。" class="headerlink" title="3.同步时间为北京时间。一般不需要，保险起见，还是同步一下。"></a>3.同步时间为北京时间。一般不需要，保险起见，还是同步一下。</h2><pre><code> yum -y install ntpdate timedatectl set-timezone Asia/Shanghai ntpdate ntp1.aliyun.com</code></pre><h2 id="4-关闭防火墙。"><a href="#4-关闭防火墙。" class="headerlink" title="4.关闭防火墙。"></a>4.关闭防火墙。</h2><pre><code> systemctl disable firewalld systemctl stop firewalld</code></pre><h2 id="5-安装并启动-Docker-docker-compose。"><a href="#5-安装并启动-Docker-docker-compose。" class="headerlink" title="5.安装并启动 Docker/docker-compose。"></a>5.安装并启动 Docker/docker-compose。</h2><pre><code> curl -fsSL https://get.docker.com | bash curl -L  &quot;https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose chmod a+x /usr/local/bin/docker-compose rm -f `which dc` ln -s /usr/local/bin/docker-compose /usr/bin/dc</code></pre><p>需要等待一会，看自己网络环境。然后逐条执行：<br> <code>systemctl start docker</code></p>
+<pre><code>service docker start
+systemctl enable docker.service</code></pre><p><code>systemctl status docker.service</code><br> <a href="https://www.54fxp.top/wp-content/uploads/2020/05/2020050204455235.png" target="_blank" rel="noopener"><img src="https://www.54fxp.top/wp-content/uploads/2020/05/2020050204455235.png" alt="V2Board后端V2Ray-Poseidon对接WS+TLS"></a></p>
+<h2 id="6-新环境安装下GIT-再从GitHub获取后端源码。"><a href="#6-新环境安装下GIT-再从GitHub获取后端源码。" class="headerlink" title="6.新环境安装下GIT,再从GitHub获取后端源码。"></a>6.新环境安装下GIT,再从GitHub获取后端源码。</h2><pre><code>yum install -y git git clone https://github.com/ColetteContreras/v2ray-poseidon.git</code></pre><h2 id="7-修改配置文件。config-json-只需要修改三项。docker-compose-yml需要修改四项。"><a href="#7-修改配置文件。config-json-只需要修改三项。docker-compose-yml需要修改四项。" class="headerlink" title="7.修改配置文件。config.json 只需要修改三项。docker-compose.yml需要修改四项。"></a>7.修改配置文件。config.json 只需要修改三项。docker-compose.yml需要修改四项。</h2><p>进入这里<br> <code>cd /root/v2ray-poseidon/docker/v2board/ws-tls</code></p>
+<p>TCP的话就是cd /root/v2ray-poseidon/docker/v2board/tcp了。<br> docker-compose.yml 中由于么有域名解析，直接改端口就好了，就是V2board 新建节点时设置的端口</p>
+<p>我链接端使用的FS，个人习惯直接FS里操作修改（当然VI编辑也好 比如vi config.json / vi docker-compose.yml）：</p>
+<p><a href="https://www.54fxp.top/wp-content/uploads/2020/05/2020050204502868.png" target="_blank" rel="noopener"><img src="https://www.54fxp.top/wp-content/uploads/2020/05/2020050204502868.png" alt="V2Board后端V2Ray-Poseidon对接WS+TLS"></a></p>
+<p>config.json中修改 下面三处，根据自己情况修改保存。</p>
+<p><code>{ &quot;poseidon&quot;: { &quot;panel&quot;: &quot;v2board&quot;,         // 这一行必须存在，且不能更改  **&quot;nodeId&quot;: 1,                // 你的节点 ID 和 v2board 里的一致** &quot;checkRate&quot;: 60,            // 每隔多长时间同步一次配置文件、用户、上报服务器信息 **&quot;webapi&quot;: &quot;http or https://YOUR V2BOARD DOMAIN&quot;,// v2board 的域名信息
+ &quot;token&quot;: &quot;v2board token&quot;,   // v2board 和 v2ray-poseidon 的通信密钥**</code></p>
+<p>“speedLimit”: 0, // 节点限速 单位 字节/s 0 表示不限速<br> “user”: {<br> “maxOnlineIPCount”: 0, // 用户同时在线 IP 数限制 0 表示不限制<br> “speedLimit”: 0 // 用户限速 单位 字节/s 0 表示不限速<br> },</p>
+<p>“localPort”: 10084 // 本地 api, dokodemo-door,　监听在哪个端口，不能和服务端口相同<br> }<br> }</p>
+<p>docker-compose.yml 修改</p>
 <blockquote>
-<p>master 分支的代码<br> 删除掉 app/Middleware/Mod_Mu.php 的 33 到 39 行的内容 <a href="https://www.54fxp.top/go?url=https://github.com/Anankke/SSPanel-Uim/blob/master/app/Middleware/Mod_Mu.php#L33-L39" target="_blank" rel="noopener">https://github.com/Anankke/SSPanel-Uim/blob/master/app/Middleware/Mod_Mu.php#L33-L39</a></p>
+<p>‘服务端’修改为443<br> CloudCone DNS下面填入你的邮箱和API<br> command: tls cloudflare sga.const.cloud 去掉前面的#号 后面改成自己的域名</p>
 </blockquote>
-<h2 id="方式一-在-docker-中运行-v2ray-poseidon"><a href="#方式一-在-docker-中运行-v2ray-poseidon" class="headerlink" title="方式一 在 docker 中运行 v2ray-poseidon"></a>方式一 在 docker 中运行 v2ray-poseidon</h2><p>本文使用这种方式。<br> <strong>安装 docker 和 docker-compose</strong></p>
-<pre><code>curl -fsSL https://get.docker.com | bash`
- `curl -L  &quot;https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose`
- `chmod a+x /usr/local/bin/docker-compose`
- `rm -rf `which dc``
- `ln -s /usr/local/bin/docker-compose /usr/bin/dc`
- `git clone https://github.com/ColetteContreras/v2ray-poseidon.git`
- `cd /root/v2ray-poseidon/docker/sspanel/ws-tls</code></pre><p><strong>修改 config.json</strong></p>
-<p>nodeId ：节点 Id<br> panelUrl ：$_ENV[‘baseUrl’]<br> panelKey ：$_ENV[‘muKey’]</p>
-<p><strong>修改 docker-compose.yml</strong></p>
-<p>CF_API_EMAIL=你的 Cloudflare 邮箱<br> CF_API_KEY=你的 Cloudflare Global API Key<br> command: tls cloudflare 域名 ，并删掉前面的 #</p>
-<h2 id="SSPANEL里新建节点"><a href="#SSPANEL里新建节点" class="headerlink" title="SSPANEL里新建节点"></a>SSPANEL里新建节点</h2><p>WS + TLS<br> <code>域名;443;2;tls;ws;path=/|host=域名</code></p>
-<h2 id="最后启动"><a href="#最后启动" class="headerlink" title="最后启动"></a>最后启动</h2><pre><code>dc up -d`
- 我测试时，使用TCP，节点绿色，联网不成功，换端口还是一样，未解决。
- 使用过TCP DC UP的，会报错，只需要停止就可以了
- `docker-compose stop</code></pre><p>另外，好多报错啥的，查看官方文档，自己google，我这小白水平，有问题任何人都是搜索解决问题一般。</p>
-<h2 id="最后测试"><a href="#最后测试" class="headerlink" title="最后测试"></a>最后测试</h2><p>订阅或者复制节点链接，OK，速度很快，其它可以考虑加速脚本。</p>
+<p>本次示例：</p>
+<blockquote>
+<p>version: ‘3’</p>
+<p>services:<br> v2ray-ws-tls:<br> image: v2cc/poseidon<br> container_name: v2ray-ws-tls<br> restart: always<br> ports:<br> # 使用 Caddy 生成 TLS 证书，所以后面的是 443<br> – “443:443”<br> volumes:<br> – ./config.json:/etc/v2ray/config.json<br> environment:<br> – USE_CADDY_TLS=true</p>
+<p># 使用 cloudflare DNS 验证<br> – CF_API_EMAIL=fxp@gmail.com —–已修改<br> – CF_API_KEY=eea505b4f62841994a10e018eaf7986 —–已修改<br> # 使用 namesilo DNS 验证<br> – NAMESILO_API_KEY=<br> # 使用 namecheap DNS 验证<br> – NAMECHEAP_API_USER=<br> – NAMECHEAP_API_KEY=<br> # 使用哪个把哪个前面的井号去掉，其它的全部注释<br> command: tls cloudflare v.liangdai.ga —–已修改<br> #command: tls namesilo your.domain<br> #command: tls namecheap your.domain</p>
+</blockquote>
+<p>也可以参考这里：<a href="https://www.youtube.com/watch?v=mvy7NATECjI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=mvy7NATECjI</a></p>
+<h2 id="8-赋予Docker权限，并且启动Docker。"><a href="#8-赋予Docker权限，并且启动Docker。" class="headerlink" title="8.赋予Docker权限，并且启动Docker。"></a>8.赋予Docker权限，并且启动Docker。</h2><p><code>chmod +x  /bin/dc cd /root/v2ray-poseidon/docker/v2board/ws-tls dc up -d</code><br> <a href="https://www.54fxp.top/wp-content/uploads/2020/05/2020050205104737.png" target="_blank" rel="noopener"><img src="https://www.54fxp.top/wp-content/uploads/2020/05/2020050205104737.png" alt="V2Board后端V2Ray-Poseidon对接WS+TLS"></a><br> 查看日志：<br> <code>dc logs</code><br> <a href="https://www.54fxp.top/wp-content/uploads/2020/05/2020050304403141.png" target="_blank" rel="noopener"><img src="https://www.54fxp.top/wp-content/uploads/2020/05/2020050304403141.png" alt="V2Board后端V2Ray-Poseidon对接WS+TLS"></a></p>
+<p>补充一下：昨天时间有限没再补充，实际测试是显示 [域名]acme: error presenting  token: cloudflare: failed to create TXT record: error from makeRequest:  HTTP status 401: invalid credentials 的，折腾一番后解决了，日志结果必须如上图所示才表示没有问题了。</p>
+<h2 id="9-回到v2board站点，刷新新建节点，发现已经正常上线了，本例4-号节点。"><a href="#9-回到v2board站点，刷新新建节点，发现已经正常上线了，本例4-号节点。" class="headerlink" title="9.回到v2board站点，刷新新建节点，发现已经正常上线了，本例4 号节点。"></a>9.回到v2board站点，刷新新建节点，发现已经正常上线了，本例4 号节点。</h2><p><a href="https://www.54fxp.top/wp-content/uploads/2020/05/2020050205595645.png" target="_blank" rel="noopener"><img src="https://www.54fxp.top/wp-content/uploads/2020/05/2020050205595645.png" alt="V2Board后端V2Ray-Poseidon对接WS+TLS"></a><br> 连接上网测试一下 也没有问题 OK<br> <a href="https://www.54fxp.top/wp-content/uploads/2020/05/2020050305431274.png" target="_blank" rel="noopener"><img src="https://www.54fxp.top/wp-content/uploads/2020/05/2020050305431274.png" alt="V2Board后端V2Ray-Poseidon对接WS+TLS"></a></p>
+<p> 写作分享不易，喜欢觉得有用，欢迎转发分享，或者打赏支持，谢谢！</p>
+<p><strong>感谢大佬原创：</strong></p>
+<p>参考视频地址（作者：<a href="https://www.54fxp.top/go?url=https://www.youtube.com/channel/UCLH-iTFxNfijgO_f32vbJZg" target="_blank" rel="noopener">Vincent Young</a>）：<strong><a href="https://www.54fxp.top/go?url=https://www.youtube.com/watch?v=mvy7NATECjI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=mvy7NATECjI </a></strong></p>
+<p>参考原文链接：<a href="https://www.54fxp.top/go?url=https://oneyyt.cn/index.php/2020/04/11/v2board-houduan/" target="_blank" rel="noopener">https://oneyyt.cn/index.php/2020/04/11/v2board-houduan/</a></p>
+<p><strong>之前没有加原文链接，在此表示歉意；在此感谢所有原创作者，写作分享不易，希望大家都要相互尊重！感谢 谢谢！！！</strong></p>
 <hr>
-<p>靓时代网站<a href="http://www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权">www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权</a><br>转载请注明原文链接：<a href="https://www.54fxp.top/940.html" target="_blank" rel="noopener">SSPanel-Uim  v2ray-poseidon docker 后端对接</a></p>
+<p>靓时代网站<a href="http://www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权">www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权</a><br>转载请注明原文链接：<a href="https://www.54fxp.top/903.html" target="_blank" rel="noopener">V2Board后端V2Ray-Poseidon对接WS+TLS</a></p>
 
             </div>
             <hr/>
@@ -525,7 +537,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rsgdxp.github.io/2020/06/05/sspanel-uim-v2ray-poseidon-docker-hou-duan-dui-jie/">https://rsgdxp.github.io/2020/06/05/sspanel-uim-v2ray-poseidon-docker-hou-duan-dui-jie/</a>
+                    <a href="https://rsgdxp.github.io/2020/06/17/v2board-hou-duan-v2ray-poseidon-dui-jie-ws-tls/">https://rsgdxp.github.io/2020/06/17/v2board-hou-duan-v2ray-poseidon-dui-jie-ws-tls/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -563,12 +575,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/docker/">
-                                    <span class="chip bg-color">docker</span>
+                                <a href="/tags/v2board/">
+                                    <span class="chip bg-color">v2board</span>
                                 </a>
                             
-                                <a href="/tags/v2ray/">
-                                    <span class="chip bg-color">v2ray</span>
+                                <a href="/tags/V2Ray-Poseidon/">
+                                    <span class="chip bg-color">V2Ray-Poseidon</span>
                                 </a>
                             
                         </div>
@@ -739,7 +751,7 @@
         repo: 'rsgdxp.github.io',
         owner: 'rsgdxp',
         admin: "rsgdxp",
-        id: '2020-06-05T15-17-08',
+        id: '2020-06-17T20-03-44',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -763,61 +775,53 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/06/05/trojan-cdn-trojan-go-an-zhuang-yin-cang-vps-ip/">
+                <a href="/2020/06/17/v2board-hou-duan-v2ray-poseidon-dui-jie-ws-tls/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="Trojan+CDN Trojan-Go安装 隐藏VPS IP">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="V2Board后端V2Ray-Poseidon对接WS+TLS">
                         
-                        <span class="card-title">Trojan+CDN Trojan-Go安装 隐藏VPS IP</span>
+                        <span class="card-title">V2Board后端V2Ray-Poseidon对接WS+TLS</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Trojan-Go套用CDN、隐藏VPS真实IP、开启websocket、多路复用提升网页打开速度！Trojan-Go安装脚本（可救被墙的VPS）
-Trojan-Go的官方说明：
-
-使用Go实现的完整Trojan代理，与Trojan协议以及
+                            原文地址：https://www.54fxp.top/903.html
+本站搭建的测试地址：https://v2.rsgdxp.com （兴趣技术学习交流） 本次介绍 WebSocket + TLS协议的对接。后端采用的是Poseidon社
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%BD%AC%E8%BD%BD%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    转载记录
+                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                    经验分享
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/trojan/">
-                        <span class="chip bg-color">trojan</span>
+                    <a href="/tags/v2board/">
+                        <span class="chip bg-color">v2board</span>
                     </a>
                     
-                    <a href="/tags/trojan-go/">
-                        <span class="chip bg-color">trojan-go</span>
-                    </a>
-                    
-                    <a href="/tags/CDN/">
-                        <span class="chip bg-color">CDN</span>
-                    </a>
-                    
-                    <a href="/tags/vps/">
-                        <span class="chip bg-color">vps</span>
+                    <a href="/tags/V2Ray-Poseidon/">
+                        <span class="chip bg-color">V2Ray-Poseidon</span>
                     </a>
                     
                 </div>
@@ -831,30 +835,24 @@ Trojan-Go的官方说明：
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/05/django-sspanel-docker-an-zhuang-jiao-cheng/">
+                <a href="/2020/06/13/centos-7-nginx-an-zhuang-yu-pei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="django-sspanel docker 安装教程">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Centos 7 Nginx安装与配置">
                         
-                        <span class="card-title">django-sspanel docker 安装教程</span>
+                        <span class="card-title">Centos 7 Nginx安装与配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            安装docker根据自己的系统 这里是centos 7 64 先
-
-yum update -y yum install -y curl vim wget  git
-
-安装docker 和 docker-compose
-
-curl -fsSL
+                            Nginx简介Nginx是一款高性能免费开源网页服务器，也可用于反向代理和负载均衡服务器。该软件由伊戈尔·赛索耶夫于2004年发布，2019年3月11日，Nginx被F5 Networks以6.7亿美元收购。2019年最新统计中，全球大约有
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-13
                             </span>
                         <span class="publish-author">
                             
@@ -871,12 +869,12 @@ curl -fsSL
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/docker/">
-                        <span class="chip bg-color">docker</span>
+                    <a href="/tags/Nginx/">
+                        <span class="chip bg-color">Nginx</span>
                     </a>
                     
-                    <a href="/tags/sspanel/">
-                        <span class="chip bg-color">sspanel</span>
+                    <a href="/tags/Centos/">
+                        <span class="chip bg-color">Centos</span>
                     </a>
                     
                 </div>
