@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rsgdxp.github.io/"/>
-  <updated>2020-06-17T12:06:52.441Z</updated>
+  <updated>2021-05-05T17:10:00.767Z</updated>
   <id>https://rsgdxp.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>农夫山泉有点甜</title>
+    <link href="https://rsgdxp.github.io/2021/05/06/nong-fu-shan-quan-you-dian-tian/"/>
+    <id>https://rsgdxp.github.io/2021/05/06/nong-fu-shan-quan-you-dian-tian/</id>
+    <published>2021-05-05T17:01:47.000Z</published>
+    <updated>2021-05-05T17:10:00.767Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;恍然隔世 似曾相识的经历&lt;/p&gt;
+&lt;p&gt;总是身不由己 却又是自己决定的路线；也许安好也许返回……&lt;/p&gt;
+&lt;p&gt;曾经54fxp.top 间隔数日 感受一番 ；而今 hexo一番（竟然都忘了cd 到hexo目录 😅）&lt;/p&gt;
+&lt;p&gt;来农夫已然快6月 新鲜
+        
+      
+    
+    </summary>
+    
+    
+      <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="农夫山泉" scheme="https://rsgdxp.github.io/tags/%E5%86%9C%E5%A4%AB%E5%B1%B1%E6%B3%89/"/>
+    
+      <category term="日记" scheme="https://rsgdxp.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>V2Board后端V2Ray-Poseidon对接WS+TLS</title>
