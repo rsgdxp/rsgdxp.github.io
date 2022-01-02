@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="django-sspanel docker 安装教程, rsgdxp&#39;s blog">
+    <meta name="keywords" content="更换了新阿里云服务器, rsgdxp&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>django-sspanel docker 安装教程 | rsgdxp&#39;s blog</title>
+    <title>更换了新阿里云服务器 | rsgdxp&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -292,7 +292,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">django-sspanel docker 安装教程</h1>
+                    <h1 class="description center-align post-title">更换了新阿里云服务器</h1>
                 </div>
             </div>
         </div>
@@ -409,12 +409,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/docker/">
-                                <span class="chip bg-color">docker</span>
+                            <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">
+                                <span class="chip bg-color">阿里云</span>
                             </a>
                         
-                            <a href="/tags/sspanel/">
-                                <span class="chip bg-color">sspanel</span>
+                            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                                <span class="chip bg-color">服务器</span>
                             </a>
                         
                     </div>
@@ -438,28 +438,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-05
+                    2022-01-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-05
+                    2022-01-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    508
+                    198
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -474,30 +474,26 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>根据自己的系统<br> 这里是centos 7 64<br> 先</p>
+                <p> 微信小程序</p>
+<p> <img src="C:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%5C2019-01-13_182957.jpg" alt=""></p>
+<p>发卡网</p>
+<img src="C:\Users\Administrator\Desktop\图片\4月图片\2019-04-17.png" alt="[https://xp.rsgdxp.com]()" style="zoom:80%;" />
+
+<p> 之前都是在旧服务器上，尤其微信小程序花费了不少时间；弃之可惜，一年以来，忙工作都生疏了许久，有些操作过程还有记忆，有些还担心怎么迁移到新服务器呢。</p>
+<p>好在，迁移过程中遇到的问题</p>
+<p>像</p>
 <blockquote>
-<p>yum update -y<br> yum install -y curl vim wget  git</p>
+<p>xp.rsgdxp.com 迁移过去报错 YAF_loader 错误</p>
+<p>因为没安装YAF，</p>
+<p>php配置文件配置开启yaf,然后重启php</p>
+<p>[yaf]<br>yaf.use_namespace=1</p>
 </blockquote>
-<p>安装docker 和 docker-compose</p>
+<p>像</p>
 <blockquote>
-<p>curl -fsSL <a href="https://www.54fxp.top/go?url=https://get.docker.com" target="_blank" rel="noopener">https://get.docker.com</a> | bash<br> curl -L “<a href="https://www.54fxp.top/go?url=https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname" target="_blank" rel="noopener">https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname</a> -s)-$(uname -m)” -o /usr/local/bin/docker-compose<br> chmod a+x /usr/local/bin/docker-compose<br> # 创建个软链接，以后用 dc 命令来代替 docker-compose<br> rm -rf <code>which dc</code>  # 若系统中存在 dc 则删除，这个 dc 就是个计算器，完全没有用<br> ln -s /usr/local/bin/docker-compose /usr/bin/dc</p>
+<p>小程序 缓存错误，DNS解析导入更改等小问题</p>
 </blockquote>
-<h2 id="下载django-sspanel-源码"><a href="#下载django-sspanel-源码" class="headerlink" title="下载django-sspanel 源码"></a>下载django-sspanel 源码</h2><pre><code>git clone https://github.com/Ehco1996/django-sspanel.git</code></pre><p><strong>进入项目根目录</strong><br> <code>cd django-sspanel</code></p>
-<p># 收集静态资源<br> <code>docker-compose run --rm web python manage.py collectstatic --noinput</code></p>
-<p># 创建数据库表<br> <code>docker-compose run --rm web python manage.py migrate</code></p>
-<p># 创建超级用户账号<br> <code>docker-compose run --rm web python manage.py create_admin --email &quot;admin@ss.com&quot; --username &quot;admin1&quot; --password &quot;adminadmin&quot;</code></p>
-<p># 开启程序并放在后台运行<br> <code>docker-compose up -d</code></p>
-<h2 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h2><pre><code>systemctl enable docker
-systemctl start docker</code></pre><p>django-sspanel/configs里<br> <strong>自行修改配置！</strong><br> <strong>自行修改配置！</strong><br> <strong>自行修改配置！</strong></p>
-<h2 id="常见错误及解决"><a href="#常见错误及解决" class="headerlink" title="常见错误及解决"></a>常见错误及解决</h2><p>提示internal  server error 等等</p>
-<p>您暂时无权查看此隐藏内容！</p>
-<p><strong>本站 搭建的演示站点：</strong></p>
-<p><a href="https://www.54fxp.top/go?url=http://www.fxpjc.xyz/" target="_blank" rel="noopener">http://www.fxpjc.xyz/</a></p>
-<p><a href="https://www.54fxp.top/go?url=https://imgchr.com/i/YB6jZn" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/14/YB6jZn.md.png" alt="django-sspanel docker 安装教程"></a></p>
-<p>以上隐藏内容查看价格为100靓时代币<a href="https://www.54fxp.top/wp-content/plugins/erphpdown/icealipay-pay-center.php?postid=946" target="_blank" rel="noopener">立即购买</a></p>
-<p>1元等于10靓时代币。购买流程：1.首先登录本站（可微信QQ登录，可注册账号邮箱验证登录）2.登录状态，点 绿色 立即购买，余额有靓时代币直接支付；否则 点击充值  进入个人中心页面，可以充值卡充值，充值卡购买地址：<a href="https://xp.rsgdxp.com，可以使用微信扫码支付、支付宝WEB支付；充值包月会员等更优惠！" target="_blank" rel="noopener">https://xp.rsgdxp.com，可以使用微信扫码支付、支付宝WEB支付；充值包月会员等更优惠！</a></p>
-<hr>
-<p>靓时代网站<a href="http://www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权">www.54fxp.top版权所有丨原创推荐分类中内容，均为原创丨本网站采用[BY-NC-SA](https://www.54fxp.top/go?url=http://creativecommons.org/licenses/by-nc-sa/3.0/)协议进行授权</a><br>转载请注明原文链接：<a href="https://www.54fxp.top/946.html" target="_blank" rel="noopener">django-sspanel docker 安装教程</a></p>
+<p>都一一解决了。</p>
+<p>已经全部迁移完毕，测试均没有问题了。服务器配置也比之前有所提升，工作之余吧，有空还是要搞搞自己喜欢想做的事情。</p>
 
             </div>
             <hr/>
@@ -523,7 +519,7 @@ systemctl start docker</code></pre><p>django-sspanel/configs里<br> <strong>自�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rsgdxp.github.io/2020/06/05/django-sspanel-docker-an-zhuang-jiao-cheng/">https://rsgdxp.github.io/2020/06/05/django-sspanel-docker-an-zhuang-jiao-cheng/</a>
+                    <a href="https://rsgdxp.github.io/2022/01/02/geng-huan-liao-xin-a-li-yun-fu-wu-qi/">https://rsgdxp.github.io/2022/01/02/geng-huan-liao-xin-a-li-yun-fu-wu-qi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -561,12 +557,12 @@ systemctl start docker</code></pre><p>django-sspanel/configs里<br> <strong>自�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/docker/">
-                                    <span class="chip bg-color">docker</span>
+                                <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">
+                                    <span class="chip bg-color">阿里云</span>
                                 </a>
                             
-                                <a href="/tags/sspanel/">
-                                    <span class="chip bg-color">sspanel</span>
+                                <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                                    <span class="chip bg-color">服务器</span>
                                 </a>
                             
                         </div>
@@ -737,7 +733,7 @@ systemctl start docker</code></pre><p>django-sspanel/configs里<br> <strong>自�
         repo: 'rsgdxp.github.io',
         owner: 'rsgdxp',
         admin: "rsgdxp",
-        id: '2020-06-05T15-13-34',
+        id: '2022-01-02T20-43-07',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -761,30 +757,39 @@ systemctl start docker</code></pre><p>django-sspanel/configs里<br> <strong>自�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/06/05/sspanel-uim-v2ray-poseidon-docker-hou-duan-dui-jie/">
+                <a href="/2022/01/02/geng-huan-liao-xin-a-li-yun-fu-wu-qi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="SSPanel-Uim v2ray-poseidon docker 后端对接">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="更换了新阿里云服务器">
                         
-                        <span class="card-title">SSPanel-Uim v2ray-poseidon docker 后端对接</span>
+                        <span class="card-title">更换了新阿里云服务器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SSPanel-Uim    v2ray-poseidon 后端对接  
-v2ray-poseidonv2ray-poseidon能对接 SSPanel 跟 v2board ，有分社区版跟商业版。这两种版本的区别就是前者只能 50 个用户以
+                             微信小程序
+ 
+发卡网
+
+
+ 之前都是在旧服务器上，尤其微信小程序花费了不少时间；弃之可惜，一年以来，忙工作都生疏了许久，有些操作过程还有记忆，有些还担心怎么迁移到新服务器呢。
+好在，迁移过程中遇到的问题
+像
+
+xp.rsgdxp.com
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -797,15 +802,16 @@ v2ray-poseidonv2ray-poseidon能对接 SSPanel 跟 v2board ，有分社区版跟�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/docker/">
-                        <span class="chip bg-color">docker</span>
+                    <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">
+                        <span class="chip bg-color">阿里云</span>
                     </a>
                     
-                    <a href="/tags/v2ray/">
-                        <span class="chip bg-color">v2ray</span>
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                        <span class="chip bg-color">服务器</span>
                     </a>
                     
                 </div>
@@ -819,25 +825,27 @@ v2ray-poseidonv2ray-poseidon能对接 SSPanel 跟 v2board ，有分社区版跟�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/05/v2board-wang-luo-jia-su/">
+                <a href="/2021/05/06/nong-fu-shan-quan-you-dian-tian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="v2board 网络加速">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="农夫山泉有点甜">
                         
-                        <span class="card-title">v2board 网络加速</span>
+                        <span class="card-title">农夫山泉有点甜</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            网络加速 | 科学上网★★★ |FXP机场|V2Board以及本站欢迎您！本站加速技术只用于网上查询资料，跨区域注册，浏览健康视频等。违规滥用秒删除。
-Github永久地址发布页，永久防失联地址：https://github.com/rsg
+                            恍然隔世 似曾相识的经历
+总是身不由己 却又是自己决定的路线；也许安好也许返回……
+曾经54fxp.top 间隔数日 感受一番 ；而今 hexo一番（竟然都忘了cd 到hexo目录 😅）
+来农夫已然快6月 新鲜 充实的生活有之，偶然间顿感
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
                             </span>
                         <span class="publish-author">
                             
@@ -854,12 +862,12 @@ Github永久地址发布页，永久防失联地址：https://github.com/rsg
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/v2board/">
-                        <span class="chip bg-color">v2board</span>
+                    <a href="/tags/%E5%86%9C%E5%A4%AB%E5%B1%B1%E6%B3%89/">
+                        <span class="chip bg-color">农夫山泉</span>
                     </a>
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/">
-                        <span class="chip bg-color">网络加速</span>
+                    <a href="/tags/%E6%97%A5%E8%AE%B0/">
+                        <span class="chip bg-color">日记</span>
                     </a>
                     
                 </div>

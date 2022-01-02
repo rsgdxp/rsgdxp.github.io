@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>更换了新阿里云服务器</title>
+      <link href="/2022/01/02/geng-huan-liao-xin-a-li-yun-fu-wu-qi/"/>
+      <url>/2022/01/02/geng-huan-liao-xin-a-li-yun-fu-wu-qi/</url>
+      
+        <content type="html"><![CDATA[<p> 微信小程序</p><p> <img src="C:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%5C2019-01-13_182957.jpg" alt=""></p><p>发卡网</p><img src="C:\Users\Administrator\Desktop\图片\4月图片\2019-04-17.png" alt="[https://xp.rsgdxp.com]()" style="zoom:80%;" /><p> 之前都是在旧服务器上，尤其微信小程序花费了不少时间；弃之可惜，一年以来，忙工作都生疏了许久，有些操作过程还有记忆，有些还担心怎么迁移到新服务器呢。</p><p>好在，迁移过程中遇到的问题</p><p>像</p><blockquote><p>xp.rsgdxp.com 迁移过去报错 YAF_loader 错误</p><p>因为没安装YAF，</p><p>php配置文件配置开启yaf,然后重启php</p><p>[yaf]<br>yaf.use_namespace=1</p></blockquote><p>像</p><blockquote><p>小程序 缓存错误，DNS解析导入更改等小问题</p></blockquote><p>都一一解决了。</p><p>已经全部迁移完毕，测试均没有问题了。服务器配置也比之前有所提升，工作之余吧，有空还是要搞搞自己喜欢想做的事情。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 阿里云 </tag>
+            
+            <tag> 服务器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>农夫山泉有点甜</title>
       <link href="/2021/05/06/nong-fu-shan-quan-you-dian-tian/"/>
       <url>/2021/05/06/nong-fu-shan-quan-you-dian-tian/</url>
