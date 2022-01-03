@@ -729,36 +729,33 @@
     </div>
 
     
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
 
-<div class="card gitalk-card" data-aos="fade-up">
+    
+        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
-    <div id="gitalk-container" class="card-content"></div>
+    <div id="gitment-content" class="card-content"></div>
 </div>
 
-<script src="/libs/gitalk/gitalk.min.js"></script>
+<script src="/libs/gitment/gitment.js"></script>
 <script>
-    let gitalk = new Gitalk({
-        clientID: '9951d4457d94e60d319c',
-        clientSecret: '0d9566551a4f7fd44611008afd99aeeb1b4bcb66',
-        repo: 'rsgdxp.github.io',
-        owner: 'rsgdxp',
-        admin: "rsgdxp",
-		
-        id: '2020-06-12T20-11-51',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-		
-		
-    });
+var gitment = new Gitment({
+    id: 'Fri Jun 12 2020 20:11:51 GMT+0800',
+    owner: 'rsgdxp',
+    repo: 'rsgdxp.github.io',
+    oauth: {
+        client_id: '9951d4457d94e60d319c',
+        client_secret: '0d9566551a4f7fd44611008afd99aeeb1b4bcb66'
+    }
+});
 
-    gitalk.render('gitalk-container');
+gitment.render('gitment-content');
 </script>
-
-    
 
     
 
