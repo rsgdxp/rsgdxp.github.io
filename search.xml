@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>hax free vps搭建xray 面板（x-ui）教程</title>
+      <link href="/2022/01/06/hax-free-vps-da-jian-xray-mian-ban-x-ui-jiao-cheng/"/>
+      <url>/2022/01/06/hax-free-vps-da-jian-xray-mian-ban-x-ui-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<p>1、一个域名</p><p>2、需要一个cloudflare账号（地址：<a href="http://cloudflare.com/" target="_blank" rel="noopener">cloudflare.com</a>）</p><p>3、把域名的DNS修改为cloudflare的DNS服务器</p><p>4、开始白嫖VPS（1周，无限续期）<a href="http://hax.co.id/" target="_blank" rel="noopener">hax.co.id</a> （注册需要电报）</p><p>个人觉得IPV4 与IPV6 映射转换这里要注意 细节。</p><p><img src="https://pic.imgdb.cn/item/61d5e3bc2ab3f51d91aee6dc.png" alt=""></p><p>5、支持多协议多用户的 xray 面板</p><blockquote><p>  bash &lt;(curl -Ls <a href="https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh</a>)</p></blockquote><p><img src="https://pic.imgdb.cn/item/61d5e3ea2ab3f51d91af032d.png" alt=""></p><p>6、建立域名证书，CloudflareST挑选速度最快的IP</p><p>CloudflareST开源下载：<a href="https://github.com/XIU2/CloudflareSpeedTest" target="_blank" rel="noopener">https://github.com/XIU2/CloudflareSpeedTest</a></p><p>参考：</p><p><a href="https://binghequanzi.blogspot.com/2021/12/vpshaxxray-x-uivmessvlesstrojanshadowso.html" target="_blank" rel="noopener">https://binghequanzi.blogspot.com/2021/12/vpshaxxray-x-uivmessvlesstrojanshadowso.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术资源 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vps </tag>
+            
+            <tag> hax.co.id </tag>
+            
+            <tag> x-ui </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>免费的可无限续期的VPS</title>
       <link href="/2022/01/05/mian-fei-de-ke-wu-xian-xu-qi-de-vps/"/>
       <url>/2022/01/05/mian-fei-de-ke-wu-xian-xu-qi-de-vps/</url>
