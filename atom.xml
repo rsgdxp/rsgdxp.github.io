@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rsgdxp.github.io/"/>
-  <updated>2022-01-03T13:58:04.354Z</updated>
+  <updated>2022-01-05T13:42:31.276Z</updated>
   <id>https://rsgdxp.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>免费的可无限续期的VPS</title>
+    <link href="https://rsgdxp.github.io/2022/01/05/mian-fei-de-ke-wu-xian-xu-qi-de-vps/"/>
+    <id>https://rsgdxp.github.io/2022/01/05/mian-fei-de-ke-wu-xian-xu-qi-de-vps/</id>
+    <published>2022-01-05T13:30:40.000Z</published>
+    <updated>2022-01-05T13:42:31.276Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://www.euserv.com/en/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;euserv&lt;/a&gt; 提供1个月免费ipv6,可以利用脚本或者手动续期，ipv6未来趋势，而且它可以搭建各种服务。&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术资源" scheme="https://rsgdxp.github.io/categories/%E6%8A%80%E6%9C%AF%E8%B5%84%E6%BA%90/"/>
+    
+    
+      <category term="VPS" scheme="https://rsgdxp.github.io/tags/VPS/"/>
+    
+      <category term="EUserv" scheme="https://rsgdxp.github.io/tags/EUserv/"/>
+    
+      <category term="IPV6" scheme="https://rsgdxp.github.io/tags/IPV6/"/>
+    
+  </entry>
   
   <entry>
     <title>更换了新阿里云服务器</title>
