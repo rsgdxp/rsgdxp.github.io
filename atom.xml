@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rsgdxp.github.io/"/>
-  <updated>2022-01-05T18:33:13.697Z</updated>
+  <updated>2022-01-05T18:58:46.962Z</updated>
   <id>https://rsgdxp.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>V2Ray客户端</title>
+    <link href="https://rsgdxp.github.io/2022/01/06/v2ray-ke-hu-duan/"/>
+    <id>https://rsgdxp.github.io/2022/01/06/v2ray-ke-hu-duan/</id>
+    <published>2022-01-05T18:55:47.000Z</published>
+    <updated>2022-01-05T18:58:46.962Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;V2Ray&lt;/strong&gt;是近几年兴起的科学上网技术，采用新的协议，因功能强大、能有效抵抗墙的干扰而广受好评。&lt;strong&gt;V2Ray官网&lt;/strong&gt;是 &lt;a href=&quot;https://v2ray.com/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术资源" scheme="https://rsgdxp.github.io/categories/%E6%8A%80%E6%9C%AF%E8%B5%84%E6%BA%90/"/>
+    
+    
+      <category term="V2Ray" scheme="https://rsgdxp.github.io/tags/V2Ray/"/>
+    
+      <category term="各平台科学上网客户端" scheme="https://rsgdxp.github.io/tags/%E5%90%84%E5%B9%B3%E5%8F%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>hax free vps搭建xray 面板（x-ui）教程</title>
