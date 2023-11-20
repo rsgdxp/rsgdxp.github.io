@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rsgdxp.github.io/"/>
-  <updated>2023-11-20T04:14:26.157Z</updated>
+  <updated>2023-11-20T06:24:27.364Z</updated>
   <id>https://rsgdxp.github.io/</id>
   
   <author>
@@ -15,6 +15,69 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo Host key verification failed.</title>
+    <link href="https://rsgdxp.github.io/2023/11/20/hexo-host-key-verification-failed/"/>
+    <id>https://rsgdxp.github.io/2023/11/20/hexo-host-key-verification-failed/</id>
+    <published>2023-11-20T06:18:11.000Z</published>
+    <updated>2023-11-20T06:24:27.364Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;报错如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic.imgdb.cn/item/655afab6c458853aef00fe64.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;由于我N九没更新（更新了一次 没注意看报错其实）上网查询 得知
+        
+      
+    
+    </summary>
+    
+    
+      <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="hexo" scheme="https://rsgdxp.github.io/tags/hexo/"/>
+    
+      <category term="key" scheme="https://rsgdxp.github.io/tags/key/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo Error: Spawn failed</title>
+    <link href="https://rsgdxp.github.io/2023/11/20/hexo-error-spawn-failed/"/>
+    <id>https://rsgdxp.github.io/2023/11/20/hexo-error-spawn-failed/</id>
+    <published>2023-11-20T06:00:20.000Z</published>
+    <updated>2023-11-20T06:15:43.218Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;报错如下：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Please make sure you have the correct access rights
+and the repository exists.
+FATAL Something&amp;#39;s wrong. Maybe you
+        
+      
+    
+    </summary>
+    
+    
+      <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="hexo" scheme="https://rsgdxp.github.io/tags/hexo/"/>
+    
+      <category term="Spawn failed" scheme="https://rsgdxp.github.io/tags/Spawn-failed/"/>
+    
+  </entry>
   
   <entry>
     <title>心安即是归处</title>
@@ -200,9 +263,9 @@
       <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
     
     
-      <category term="农夫山泉" scheme="https://rsgdxp.github.io/tags/%E5%86%9C%E5%A4%AB%E5%B1%B1%E6%B3%89/"/>
-    
       <category term="日记" scheme="https://rsgdxp.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="农夫山泉" scheme="https://rsgdxp.github.io/tags/%E5%86%9C%E5%A4%AB%E5%B1%B1%E6%B3%89/"/>
     
   </entry>
   
@@ -561,64 +624,6 @@
     
     
       <category term="hexo" scheme="https://rsgdxp.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>代码块显示有问题？</title>
-    <link href="https://rsgdxp.github.io/2020/05/31/dai-ma-kuai-xian-shi-you-wen-ti/"/>
-    <id>https://rsgdxp.github.io/2020/05/31/dai-ma-kuai-xian-shi-you-wen-ti/</id>
-    <published>2020-05-31T07:52:03.000Z</published>
-    <updated>2020-06-01T02:40:50.493Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;为什么代码块显示有问题？&quot;&gt;&lt;a href=&quot;#为什么代码块显示有问题？&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="code" scheme="https://rsgdxp.github.io/tags/code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2020最新WIN环境github + hexo搭建个人博客</title>
-    <link href="https://rsgdxp.github.io/2020/05/29/2020-zui-xin-win-huan-jing-github-hexo-da-jian-ge-ren-bo-ke/"/>
-    <id>https://rsgdxp.github.io/2020/05/29/2020-zui-xin-win-huan-jing-github-hexo-da-jian-ge-ren-bo-ke/</id>
-    <published>2020-05-29T08:15:11.000Z</published>
-    <updated>2020-06-05T03:10:38.325Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-前言及Hexo介绍&quot;&gt;&lt;a href=&quot;#1-前言及Hexo介绍&quot; class=&quot;headerlink&quot; title=&quot;1.前言及Hexo介绍&quot;&gt;&lt;/a&gt;1.前言及Hexo介绍&lt;/h3&gt;&lt;h5
-        
-      
-    
-    </summary>
-    
-    
-      <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="hexo" scheme="https://rsgdxp.github.io/tags/hexo/"/>
-    
-      <category term="github" scheme="https://rsgdxp.github.io/tags/github/"/>
-    
-      <category term="blog" scheme="https://rsgdxp.github.io/tags/blog/"/>
     
   </entry>
   

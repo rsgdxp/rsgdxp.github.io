@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>hexo Host key verification failed.</title>
+      <link href="/2023/11/20/hexo-host-key-verification-failed/"/>
+      <url>/2023/11/20/hexo-host-key-verification-failed/</url>
+      
+        <content type="html"><![CDATA[<p>报错如下：</p><p><img src="https://pic.imgdb.cn/item/655afab6c458853aef00fe64.png" alt=""></p><p>由于我N九没更新（更新了一次 没注意看报错其实）上网查询 得知 4月份GITHUB官方更新了一次秘钥。那么看</p><p>大致意思就是RSA密钥的指纹对不上，或者是仓库没有权限，在排除权限问题后，需要扫描一下<code>github.com</code>使用的指纹，并添加到<code>~/.ssh/known_hosts</code>中，执行：</p><p><code>ssh-keyscan -H github.com &gt;&gt; ~/.ssh/known_hosts</code></p><p>即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> key </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo Error: Spawn failed</title>
+      <link href="/2023/11/20/hexo-error-spawn-failed/"/>
+      <url>/2023/11/20/hexo-error-spawn-failed/</url>
+      
+        <content type="html"><![CDATA[<p>报错如下：</p><p><code>Please make sure you have the correct access rightsand the repository exists.FATAL Something&#39;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.htmlError: Spawn failed    at ChildProcess.&lt;anonymous&gt; (F:\hexo\node_modules\hexo-util\lib\spawn.js:51:21)    at ChildProcess.emit (events.js:315:20)    at ChildProcess.cp.emit (F:\hexo\node_modules\cross-spawn\lib\enoent.js:34:29)    at Process.ChildProcess._handle.onexit (internal/child_process.js:275:12)</code></p><p>删除之前的秘钥 重新创建一个</p><p><code>rm -f ~/.ssh/id_rsa.pub</code></p><p><code>ssh-keygen -t rsa -C &quot;2809…840@qq.com&quot;</code></p><p><img src="https://pic.imgdb.cn/item/655af8b9c458853aeffb08de.png" alt=""></p><p>然后 <strong>在C:\Users\Administrator.ssh</strong>  下打开新创建的id_ras.pub文件 复制里面的秘钥 到</p><p>你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p><p><img src="https://pic2.zhimg.com/80/v2-faaf37a5a7ae6b92af4d81a28bf6d625_720w.webp" alt="img"></p><p>将刚复制的内容粘贴到key那里，title随便填，保存。</p><p>然后 hexo d -g 解决问题。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> Spawn failed </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>心安即是归处</title>
       <link href="/2023/11/20/xin-an-ji-shi-gui-chu/"/>
       <url>/2023/11/20/xin-an-ji-shi-gui-chu/</url>
@@ -161,9 +215,9 @@
       
         <tags>
             
-            <tag> 农夫山泉 </tag>
-            
             <tag> 日记 </tag>
+            
+            <tag> 农夫山泉 </tag>
             
         </tags>
       
