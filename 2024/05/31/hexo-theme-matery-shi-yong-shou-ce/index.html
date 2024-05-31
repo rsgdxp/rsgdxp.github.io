@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo博客主题之hexo-theme-matery的介绍, rsgdxp&#39;s blog">
+    <meta name="keywords" content="hexo-theme-matery使用手册, rsgdxp&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo博客主题之hexo-theme-matery的介绍 | rsgdxp&#39;s blog</title>
+    <title>hexo-theme-matery使用手册 | rsgdxp&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo博客主题之hexo-theme-matery的介绍</h1>
+                    <h1 class="description center-align post-title">hexo-theme-matery使用手册</h1>
                 </div>
             </div>
         </div>
@@ -413,8 +413,8 @@
                                 <span class="chip bg-color">hexo</span>
                             </a>
                         
-                            <a href="/tags/matery/">
-                                <span class="chip bg-color">matery</span>
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
                             </a>
                         
                     </div>
@@ -438,28 +438,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-31
+                    2024-05-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-31
+                    2024-05-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    501
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -474,64 +474,186 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>转载：<a href="https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/" target="_blank" rel="noopener">https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</a></p>
-<p>自己修改的：</p>
-<h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>由于 Hexo 自带的代码高亮主题显示不好看，所以主题中使用到了 <a href="https://github.com/ele828/hexo-prism-plugin" target="_blank" rel="noopener">hexo-prism-plugin</a> 的 Hexo 插件来做代码高亮，安装命令如下：</p>
-<p>复制成功</p>
-<p>bash</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i -S hexo-prism-plugin</code></pre>
-<p>然后，修改 Hexo 根目录下 <code>_config.yml</code> 文件中 <code>highlight.enable</code> 的值为 <code>false</code>，并新增 <code>prism</code> 插件相关的配置，主要配置如下：</p>
-<p>复制成功</p>
-<p>yaml</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">highlight</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+                <h4 id="修改友情链接"><a href="#修改友情链接" class="headerlink" title="修改友情链接"></a>修改友情链接</h4><p>在 “Blog\source\data\friends.json” 目录下修改配置文件</p>
+<p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/1595649945373.png" alt="img"></p>
+<h4 id="自动添加文章的名称、时间等信息"><a href="#自动添加文章的名称、时间等信息" class="headerlink" title="自动添加文章的名称、时间等信息"></a>自动添加文章的名称、时间等信息</h4><p>需要创建文件 “scaffolds\post.md”</p>
+<pre><code>---
+title: {{ title }}
+date: {{ date }}
+tags: [标签]
+author: 用户名
+top: false
+cover: false
+toc: true
+mathjax: true
+categories: &quot;分类&quot;
+---</code></pre><h4 id="完整实例"><a href="#完整实例" class="headerlink" title="完整实例"></a>完整实例</h4><p>👇修改文章封面,修改文章轮播图等</p>
+<pre><code>---
+title: {{title}}
+date: {{data}}
+author: 作者名字
+img: /source/images/xxx.jpg &quot;文章特征图,路径在source中&quot;
+top: true &quot;推荐文章&quot;
+cover: true &quot;表示该文章是否需要加入到首页轮播封面中&quot;
+coverImg: /images/1.jpg &quot;轮播图中的封面,访问的是&quot;source&quot;下的&quot;images&quot;&quot;
+password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+toc: false &quot;是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 config.yml 中激活了 toc 选项&quot;
+mathjax: false &quot;是否开启数学公式支持,本文章是否开启 mathjax，且需要在主题的 _config.yml 文件中也需要开启才行&quot;
+summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+categories: Markdown
+tags:
+  - Typora
+  - Markdown
+---</code></pre><h4 id="banner-图片的轮播数量"><a href="#banner-图片的轮播数量" class="headerlink" title="banner 图片的轮播数量"></a>banner 图片的轮播数量</h4><p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/20210313183222.png" alt="img"></p>
+<p>选择主题下的 <strong>hexo-theme-matery\layout\ _partial\bg-cover-content.ejs</strong> 文件</p>
+<p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/20210313183501.png" alt="img"></p>
+<h2 id="文章-Front-matter-介绍"><a href="#文章-Front-matter-介绍" class="headerlink" title="文章 Front-matter 介绍"></a>文章 Front-matter 介绍</h2><h3 id="Front-matter-选项详解"><a href="#Front-matter-选项详解" class="headerlink" title="Front-matter 选项详解"></a>Front-matter 选项详解</h3><p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
+<table>
+<thead>
+<tr>
+<th align="left">配置选项</th>
+<th align="left">默认值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">title</td>
+<td align="left"><code>Markdown</code> 的文件标题</td>
+<td align="left">文章标题，强烈建议填写此选项</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td align="left">文件创建时的日期时间</td>
+<td align="left">发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
+</tr>
+<tr>
+<td align="left">author</td>
+<td align="left">根 <code>_config.yml</code> 中的 <code>author</code></td>
+<td align="left">文章作者</td>
+</tr>
+<tr>
+<td align="left">img</td>
+<td align="left"><code>featureImages</code> 中的某个值</td>
+<td align="left">文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <code>http://xxx.com/xxx.jpg</code></td>
+</tr>
+<tr>
+<td align="left">top</td>
+<td align="left"><code>true</code></td>
+<td align="left">推荐文章（文章是否置顶），如果 <code>top</code> 值为 <code>true</code>，则会作为首页推荐文章</td>
+</tr>
+<tr>
+<td align="left">cover</td>
+<td align="left"><code>false</code></td>
+<td align="left"><code>v1.0.2</code>版本新增，表示该文章是否需要加入到首页轮播封面中</td>
+</tr>
+<tr>
+<td align="left">coverImg</td>
+<td align="left">无</td>
+<td align="left"><code>v1.0.2</code>版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td align="left">password</td>
+<td align="left">无</td>
+<td align="left">文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 <code>password</code> 的值，该值必须是用 <code>SHA256</code> 加密后的密码，防止被他人识破。前提是在主题的 <code>config.yml</code> 中激活了 <code>verifyPassword</code> 选项</td>
+</tr>
+<tr>
+<td align="left">toc</td>
+<td align="left"><code>true</code></td>
+<td align="left">是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 <code>config.yml</code> 中激活了 <code>toc</code> 选项</td>
+</tr>
+<tr>
+<td align="left">mathjax</td>
+<td align="left"><code>false</code></td>
+<td align="left">是否开启数学公式支持 ，本文章是否开启 <code>mathjax</code>，且需要在主题的 <code>_config.yml</code> 文件中也需要开启才行</td>
+</tr>
+<tr>
+<td align="left">summary</td>
+<td align="left">无</td>
+<td align="left">文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</td>
+</tr>
+<tr>
+<td align="left">categories</td>
+<td align="left">无</td>
+<td align="left">文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td align="left">无</td>
+<td align="left">文章标签，一篇文章可以多个标签</td>
+</tr>
+<tr>
+<td align="left">keywords</td>
+<td align="left">文章标题</td>
+<td align="left">文章关键字，SEO 时需要</td>
+</tr>
+<tr>
+<td align="left">reprintPolicy</td>
+<td align="left">cc_by</td>
+<td align="left">文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</td>
+</tr>
+</tbody></table>
+<h2 id="修改各种标题"><a href="#修改各种标题" class="headerlink" title="修改各种标题"></a>修改各种标题</h2><h3 id="修改副标题和短句"><a href="#修改副标题和短句" class="headerlink" title="修改副标题和短句"></a>修改副标题和短句</h3><p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/20201031160424.png" alt="副标题"></p>
+<p><strong>副标题</strong></p>
+<p>修改根目录下的 “<strong>_config.xml</strong>”</p>
+<p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/20201031160741.png" alt="修改副标题"></p>
+<p><strong>修改副标题</strong></p>
+<p>根目录下“<strong>themes\hexo-theme-matery_config.xml</strong>”</p>
+<p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/20201031161025.png" alt="img"></p>
+<p>subtitle标签负责副标题的短句。</p>
+<h3 id="修改-“梦想”短句"><a href="#修改-“梦想”短句" class="headerlink" title="修改 “梦想”短句"></a>修改 “梦想”短句</h3><p>根目录下“<strong>themes\hexo-theme-matery_config.xml</strong>”</p>
+<p>dream标签负责梦想短句。</p>
+<p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/20201031161233.png" alt="img"></p>
+<h2 id="备份和还原Blog"><a href="#备份和还原Blog" class="headerlink" title="备份和还原Blog"></a>备份和还原Blog</h2><h3 id="备份github创建私有仓库"><a href="#备份github创建私有仓库" class="headerlink" title="备份github创建私有仓库"></a>备份github创建私有仓库</h3><p>私有仓库设置为名字Blog(与文件夹名字相同即可),将文件下载到Blog的根目录下,将”.git”文件和”.gitignore”文件拖拽到Blog目录下。</p>
+<p>‘’.gitignore’文件内添加要忽视的文件夹</p>
+<pre><code>.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/</code></pre><p>正常提交即可</p>
+<p>ps:可能会出现文件夹过大的原因</p>
+<p><a href="https://thecara.github.io/2020/07/19/git设置提交文件大小/" target="_blank" rel="noopener">办法</a></p>
+<h3 id="还原Blog"><a href="#还原Blog" class="headerlink" title="还原Blog"></a>还原Blog</h3><p>建议:使用新的电脑或者使用虚拟机来测试</p>
+<p>安装git,配置git</p>
+<p>使用”git Bash” 输入👇.</p>
+<pre><code>$ git config --global user.name &quot;your name&quot;
+$ git config --global user.email &quot;your_email@youremail.com&quot;
+ssh-keygen -t rsa -C &quot;自己的邮箱&quot;</code></pre><p><a href="https://github.com/settings/ssh/new" target="_blank" rel="noopener">设置SHH</a></p>
+<p>完成后会出现shh文件的目录,打开”.pub”类型文件将内容复制到这里。</p>
+<p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/1595819104102.png" alt="img"></p>
+<p>完成后克隆我们的”Blog”</p>
+<h3 id="安装nove-js"><a href="#安装nove-js" class="headerlink" title="安装nove.js"></a>安装nove.js</h3><p>在Blog目录下使用”git Bash”</p>
+<p>直接安装 hexo,如果网络过慢建议配置仓库.</p>
+<pre><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org</code></pre><p><a href="https://developer.aliyun.com/mirror/NPM" target="_blank" rel="noopener">更多</a></p>
+<pre><code>npm i hexo-cli -g 或者 npm install hexo --save</code></pre><p>搭建</p>
+<pre><code>hexo g
 
-<span class="token key atrule">prism_plugin</span><span class="token punctuation">:</span>
-  <span class="token key atrule">mode</span><span class="token punctuation">:</span> <span class="token string">'preprocess'</span>    <span class="token comment" spellcheck="true"># realtime/preprocess</span>
-  <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'tomorrow'</span>
-  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">false    </span><span class="token comment" spellcheck="true"># default false</span>
-  custom_css<span class="token punctuation">:</span></code></pre>
-<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>本主题中还使用到了 <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a> 的 Hexo 插件来做内容搜索，安装命令如下：</p>
-<p>复制成功</p>
-<p>bash</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save</code></pre>
-<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
-<p>复制成功</p>
-<p>yaml</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">search</span><span class="token punctuation">:</span>
-  <span class="token key atrule">path</span><span class="token punctuation">:</span> search.xml
-  <span class="token key atrule">field</span><span class="token punctuation">:</span> post</code></pre>
-<h3 id="中文链接转拼音（可选的）"><a href="#中文链接转拼音（可选的）" class="headerlink" title="中文链接转拼音（可选的）"></a>中文链接转拼音（可选的）</h3><p>如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 <code>SEO</code>，且 <code>gitment</code> 评论对中文链接也不支持。我们可以用 <a href="https://github.com/viko16/hexo-permalink-pinyin" target="_blank" rel="noopener">hexo-permalink-pinyin</a> Hexo 插件使在生成文章时生成中文拼音的永久链接。</p>
-<p>安装命令如下：</p>
-<p>复制成功</p>
-<p>bash</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i hexo-permalink-pinyin --save</code></pre>
-<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
-<p>复制成功</p>
-<p>yaml</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">permalink_pinyin</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">separator</span><span class="token punctuation">:</span> <span class="token string">'-'</span> <span class="token comment" spellcheck="true"># default: '-'</span></code></pre>
-<blockquote>
-<p><strong>注</strong>：除了此插件外，<a href="https://github.com/rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a> 插件也可以生成非中文的链接。</p>
-</blockquote>
-<h3 id="添加-RSS-订阅支持（可选的）"><a href="#添加-RSS-订阅支持（可选的）" class="headerlink" title="添加 RSS 订阅支持（可选的）"></a>添加 RSS 订阅支持（可选的）</h3><p>本主题中还使用到了 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a> 的 Hexo 插件来做 <code>RSS</code>，安装命令如下：</p>
-<p>复制成功</p>
-<p>bash</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed --save</code></pre>
-<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
-<p>复制成功</p>
-<p>yaml</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">feed</span><span class="token punctuation">:</span>
-  <span class="token key atrule">type</span><span class="token punctuation">:</span> atom
-  <span class="token key atrule">path</span><span class="token punctuation">:</span> atom.xml
-  <span class="token key atrule">limit</span><span class="token punctuation">:</span> <span class="token number">20</span>
-  <span class="token key atrule">hub</span><span class="token punctuation">:</span>
-  <span class="token key atrule">content</span><span class="token punctuation">:</span>
-  <span class="token key atrule">content_limit</span><span class="token punctuation">:</span> <span class="token number">140</span>
-  <span class="token key atrule">content_limit_delim</span><span class="token punctuation">:</span> <span class="token string">' '</span>
-  <span class="token key atrule">order_by</span><span class="token punctuation">:</span> <span class="token punctuation">-</span>date</code></pre>
-<p>执行 <code>hexo clean &amp;&amp; hexo g</code> 重新生成博客文件，然后在 <code>public</code> 文件夹中即可看到 <code>atom.xml</code> 文件，说明你已经安装成功了。</p>
+hexo s
+
+hexo d</code></pre><p>ps:</p>
+<p>如果出现 “ERROR Plugin load failed: hexo-prism-plugin”错误 直接删除”node_modules\hexo-prism-plugin”下的文件夹。</p>
+<p>安装 nove.js 自动安装choco<a href="https://thecara.github.io/2020/07/26/choco的配置与应用的安装/" target="_blank" rel="noopener">可能会报错使用</a></p>
+<p>引用:<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md</a></p>
+<h2 id="Hexo-让文章按照最新的提交时间进行排序"><a href="#Hexo-让文章按照最新的提交时间进行排序" class="headerlink" title="Hexo 让文章按照最新的提交时间进行排序"></a>Hexo 让文章按照最新的提交时间进行排序</h2><p>让我们最新提交或者更新的文章在界面的首个位置。</p>
+<p>在主配置文件 <strong>_config.ym</strong>l, 查找 <strong>index_generator</strong> 标签 <strong>order_by</strong> 属性修改为 <strong>-updated</strong> 即可。</p>
+<pre><code>index_generator:
+  path: &#39;&#39;
+  per_page: 18
+  order_by: -updated </code></pre><p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/20201212171501.png" alt="img"></p>
+<p>之后</p>
+<pre><code>hexo g</code></pre><p>完成。</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>在使用 目录导航时不建议 “标题” 配合 “无序列表” 使用（hexo-version:4.2）</p>
+<p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/2020-8-19-0.gif" alt="img"></p>
+<p>会出现无法跳转到指定目录。</p>
+<p><strong>在使用尖括号（或称角括号）时</strong></p>
+<p>不要使用两对的紧靠的尖括号，会出现识别为假链接的bug</p>
+<p>例如：</p>
+<p>test</p>
+<p>实际想要的结果是 &lt; A &gt; test &lt; A &gt;</p>
+<p><img src="https://raw.githubusercontent.com/TheCara/RepoPicture/master/image/2021-10-25-0.gif" alt="上述描述结果"></p>
+<p><strong>上述描述结果</strong></p>
+<p>from: <a href="https://thecara.github.io/2020/07/19/hexo-theme-%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" target="_blank" rel="noopener">https://thecara.github.io/2020/07/19/hexo-theme-%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</a></p>
 
             </div>
             <hr/>
@@ -557,7 +679,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rsgdxp.github.io/2020/05/31/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/">https://rsgdxp.github.io/2020/05/31/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</a>
+                    <a href="https://rsgdxp.github.io/2024/05/31/hexo-theme-matery-shi-yong-shou-ce/">https://rsgdxp.github.io/2024/05/31/hexo-theme-matery-shi-yong-shou-ce/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -599,8 +721,8 @@
                                     <span class="chip bg-color">hexo</span>
                                 </a>
                             
-                                <a href="/tags/matery/">
-                                    <span class="chip bg-color">matery</span>
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
                                 </a>
                             
                         </div>
@@ -1031,40 +1153,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/06/01/matery-zhu-ti-wen-zhang-front-matter-jie-shao/">
+                <a href="/2024/05/31/hexo-theme-matery-shi-yong-shou-ce/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="matery主题 文章 Front-matter 介绍">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="hexo-theme-matery使用手册">
                         
-                        <span class="card-title">matery主题 文章 Front-matter 介绍</span>
+                        <span class="card-title">hexo-theme-matery使用手册</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            文章 Front-matter 介绍Front-matter 选项详解Front-matter 选项中的所有内容均为非必填的。但我仍然建议至少填写 title 和 date 的值。
+                            修改友情链接在 “Blog\source\data\friends.json” 目录下修改配置文件
 
-
-
-配置选项
-默认值
-描述
-
-
-
-title
-Markd
+自动添加文章的名称、时间等信息需要创建文件 “scaffolds\post.md”
+---
+title: {{ title }}
+date
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1077,15 +1194,16 @@ Markd
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/matery/">
-                        <span class="chip bg-color">matery</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
-                    <a href="/tags/Front-matter/">
-                        <span class="chip bg-color">Front-matter</span>
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
@@ -1099,25 +1217,27 @@ Markd
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/31/shi-yong-hexo-d-ming-ling-yi-chang-you-should-configure-deployment-settings-in-config-yml-first/">
+                <a href="/2024/05/23/ping-guo-xi-tong-shou-ji-ru-he-cha-kan-dao-chu-wei-xin-liao-tian-ji-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="使用 hexo d 命令异常：You should configure deployment settings in _config.yml first! ...">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="苹果系统手机如何查看导出微信聊天记录">
                         
-                        <span class="card-title">使用 hexo d 命令异常：You should configure deployment settings in _config.yml first! ...</span>
+                        <span class="card-title">苹果系统手机如何查看导出微信聊天记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1:排查是否安装一下hexo-deployer-git这个模块没有安的话装使用指令安装:npm install hexo-deployer-git --save
-2:检查deploy: 下面的节点 如type:这些 需要缩进。 之前是这种格
+                            苹果系统手机如何查看导出微信聊天记录苹果手机微信聊天记录导出到电脑的步骤如下：
+第一步：将苹果手机连接到电脑上。
+
+第二步：打开iTunes软件(压缩包里有)，点击iTunes软件左上角的小手机图标，选择“本电脑”，再点击“立即备份”按钮。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-23
                             </span>
                         <span class="publish-author">
                             
@@ -1134,8 +1254,12 @@ Markd
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95/">
+                        <span class="chip bg-color">聊天记录</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BE%AE%E4%BF%A1/">
+                        <span class="chip bg-color">微信</span>
                     </a>
                     
                 </div>
