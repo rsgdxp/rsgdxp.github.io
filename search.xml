@@ -4,6 +4,85 @@
   
     
     <entry>
+      <title>苹果系统手机如何查看导出微信聊天记录</title>
+      <link href="/2024/05/23/ping-guo-xi-tong-shou-ji-ru-he-cha-kan-dao-chu-wei-xin-liao-tian-ji-lu/"/>
+      <url>/2024/05/23/ping-guo-xi-tong-shou-ji-ru-he-cha-kan-dao-chu-wei-xin-liao-tian-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="苹果系统手机如何查看导出微信聊天记录"><a href="#苹果系统手机如何查看导出微信聊天记录" class="headerlink" title="苹果系统手机如何查看导出微信聊天记录"></a>苹果系统手机如何查看导出微信聊天记录</h1><p><strong>苹果手机微信聊天记录导出到电脑的步骤如下：</strong></p><p>第一步：将苹果手机连接到电脑上。</p><p><img src="https://obsidian.54fxp.xyz/img/user/%E7%9F%A5%E8%AF%86%E6%8A%80%E8%83%BD/attachments/55a598e85b6dfcb8dd96e7c17ee70dab_MD5.png" alt="img"></p><p>第二步：打开iTunes软件(压缩包里有)，点击iTunes软件左上角的小手机图标，选择“本电脑”，再点击“立即备份”按钮。为了节约时间，请点击弹出窗口上的“不备份应用程序”，点击顺序分别为如下图所示。</p><p><img src="https://obsidian.54fxp.xyz/img/user/%E7%9F%A5%E8%AF%86%E6%8A%80%E8%83%BD/attachments/e37028674ae8f87e4c098026acbd32e8_MD5.png" alt="img"></p><p>说明1：如果软件弹出窗口询问是否对备份数据加密，请点击“不加密”。<br>说明2：如果备份时提示电脑C盘空间不够，可修改iTunes备份路径到其它盘符再进行备份，设置方法：<a href="https://www.louyue.com/itunespath.htm" target="_blank" rel="noopener">如何修改iTunes备份路径</a>，也可删除C盘中的一些无用文件或者换到别的电脑上进行操作。<br>说明3：软件在备份时，窗口顶部将会显示备份的进度，备份通常需要比较久的时间，少则几分钟，多则几十分钟甚至几个小时，当窗口顶部的进度条消失后，才说明备份已经完成。备份完成后，可将iTunes软件关闭，并将手机从电脑上移除。</p><p>特别说明：WIN10系统 IPHONE手机连接电脑后端USB接口 大概手机30G的内容 用时大概2小时左右<br>所以 要有耐心 等待全部备份完成。</p><p>第三步：打开“iTunes备份管理器”（压缩包里有 ，安装后打开），双击主窗口上的那行备份数据<br>没有出现的话就点击 文件菜单 刷新数据。<br><img src="https://obsidian.54fxp.xyz/img/user/%E7%9F%A5%E8%AF%86%E6%8A%80%E8%83%BD/attachments/f8ecf2f1762772f11e7516463b1547e1_MD5.png" alt="img"></p><p>点击左侧的“微信聊天记录”，再在右边单击选中“Documents”文件夹，并点击“导出”按钮将其导出到电脑上的任意目录下。。</p><p><img src="https://obsidian.54fxp.xyz/img/user/%E7%9F%A5%E8%AF%86%E6%8A%80%E8%83%BD/attachments/610f14943fd8eb03a3d024911716d30a_MD5.png" alt="img"></p><p>耐心等待全部导出完毕</p><p>第四步：运行压缩包里v1.9.5.13-x64-win文件夹下，WechatExporter.exe 它会自动选取你备份的资源文件，你选取账号，要导出的内容后，点击导出即可。 导出的地址在上方输出目录。聊天记录以文件夹和html文件命名保存。</p><p><img src="https://obsidian.54fxp.xyz/img/user/%E7%9F%A5%E8%AF%86%E6%8A%80%E8%83%BD/attachments/8b35c4efad3e1ba96bd5706501ae3b24_MD5.png" alt="img"></p><p>说明：随着微信版本的升级，现在新版本微信已经没有任何办法可对删除的聊天记录进行恢复。但是可以看到很多手机电脑端看不到的“记忆”内容。自行体会哈。</p><p>如果有问题或者还需要其它微信聊天记录查看相关软件，请联系地球号 rsgdxp</p><p>付费购买地址：<a href="https://fk.54fxp.xyz/buy/13" target="_blank" rel="noopener">苹果系统微信聊天记录查看导出软件 | fk.54fxp.xyz</a></p><p><strong>压缩包解压密码：rsgdxp</strong> </p><p><em>请理解个人多次试错付出的时间等成本，能理解并支持的定会倾力帮助你解决问题。</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 聊天记录 </tag>
+            
+            <tag> 微信 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>(node:2112) Warning: Accessing non-existent property</title>
+      <link href="/2024/05/11/node-2112-warning-accessing-non-existent-property/"/>
+      <url>/2024/05/11/node-2112-warning-accessing-non-existent-property/</url>
+      
+        <content type="html"><![CDATA[<h2 id="node报错"><a href="#node报错" class="headerlink" title="node报错"></a>node报错</h2><p><img src="https://pic.imgdb.cn/item/663f753e0ea9cb14036555f9.png" alt=""></p><p>   挂在github上的hexo博客之前是在WIN7下的，现在基本使用WIN10索性搞过来</p><p>   安装完Git 和 Node之后，试着发布一篇测试，结果报错找不到环境，一想也对，新系统环境得对接一下至少，于是参照我之前写的：</p><h5 id="2020最新WIN环境github-hexo搭建个人博客"><a href="#2020最新WIN环境github-hexo搭建个人博客" class="headerlink" title="2020最新WIN环境github + hexo搭建个人博客"></a><a href="https://rsgdxp.github.io/2020/05/29/2020-zui-xin-win-huan-jing-github-hexo-da-jian-ge-ren-bo-ke/">2020最新WIN环境github + hexo搭建个人博客</a></h5><p> 搞完，试着发布，发现报错，一查发现是<strong>由于node版本太高了</strong>，于是换了低版本问题解决。于是就有了这篇。</p><p>补记：</p><pre><code>rsgdxp@DESKTOP-A3UOIS3 MINGW64 /c/hexo$ hexo dINFO  Deploying: gitINFO  Clearing .deploy_git folder...INFO  Copying files from public folder...INFO  Copying files from extend dirs...fatal: detected dubious ownership in repository at &#39;C:/hexo/.deploy_git&#39;&#39;C:/hexo/.deploy_git&#39; is owned by:        (inconvertible) (S-1-5-21-3378737320-2756843768-2847192813-500)but the current user is:        DESKTOP-A3UOIS3/rsgdxp (S-1-5-21-3253263988-200691010-3797055721-1001)To add an exception for this directory, call:        git config --global --add safe.directory C:/hexo/.deploy_gitFATAL Something&#39;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.htmlError: Spawn failed    at ChildProcess.&lt;anonymous&gt; (C:\hexo\node_modules\hexo-util\lib\spawn.js:51:21)    at ChildProcess.emit (events.js:314:20)    at ChildProcess.cp.emit (C:\hexo\node_modules\cross-spawn\lib\enoent.js:34:29)    at Process.ChildProcess._handle.onexit (internal/child_process.js:276:12)rsgdxp@DESKTOP-A3UOIS3 MINGW64 /c/hexo$ ^Crsgdxp@DESKTOP-A3UOIS3 MINGW64 /c/hexo$  git config --global --add safe.directory C:/hexo/.deploy_git</code></pre><p>发布时报如上错误，那么按照提示搞就好 了 。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> node </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>阅读思考 实践执行 改变人生</title>
+      <link href="/2024/05/09/yue-du-si-kao-shi-jian-zhi-xing-gai-bian-ren-sheng/"/>
+      <url>/2024/05/09/yue-du-si-kao-shi-jian-zhi-xing-gai-bian-ren-sheng/</url>
+      
+        <content type="html"><![CDATA[<pre><code>cd F:\hexo</code></pre><pre><code>hexo new &quot;阅读思考 实践执行 改变人生&quot;</code></pre><pre><code>INFO  Created: F:\hexo\source\_posts\阅读思考-实践执行-改变人生.md</code></pre><p>Typora继续,然后</p><pre><code>hexo g</code></pre><pre><code>hexo d</code></pre><h1 id="近来流水账"><a href="#近来流水账" class="headerlink" title="近来流水账~"></a>近来流水账~</h1><ul><li>持续阅读 得到 微信读书等等渠道信息资源中</li><li>也持续的写一些内容的 但是思考执行力输出还不是很强</li><li>电子书完成30+  印象深刻的有《认知觉醒》《笔记的方法》《把时间当作朋友》《蛤蟆先生看心理医生》《逆商》《金钱心理学》《一句顶一万句》《追风筝的人》《人生每一步都算数》《相信》《被讨厌的勇气》《月亮与六便士》《事实》《傲慢与偏见》《额尔古纳河右岸》等等</li><li>对我影响较深的，我认为有《认知觉醒》《笔记的方法》</li><li>不再沉迷以前注重的东西 包括很多 戒除了游戏意念 牢记断舍离</li></ul><h1 id="近来的具体与思考行动"><a href="#近来的具体与思考行动" class="headerlink" title="近来的具体与思考行动"></a>近来的具体与思考行动</h1><ol><li>obsidian 学习了N多插件的用法，真强大，构建了自己的两套库；搭建个人知识库 叫数字花园也可。公众号也发布及好几篇实践操作记录的文章。</li><li>注重时间的规划利用，不再浪费时间；注重目标指向，做事先思考；用现实问题指导阅读具体，用滴答清单效率具体安排；不再求多，专注自己的具体领域 具体项目 而精进。</li><li>始终围绕 个人 为中心行事。只有自己能改变自己。当然，跟优秀沟通交流学习不是排斥的。</li><li>早起 冥想 读写跑 真的应该一步步的做下去 收获无限</li><li>改掉了很多不好的习惯 点赞</li><li>搭建了 数字花园站、搭建了 memos 站，之前还搭建了chatgpt 站等</li><li>AI 方面也在持续关注 学习中</li></ol><h2 id="推荐阅读我写的文章"><a href="#推荐阅读我写的文章" class="headerlink" title="推荐阅读我写的文章"></a>推荐阅读我写的文章</h2><ul><li><input disabled="" type="checkbox"> <p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTgwNjU5Mg==&mid=2247484161&idx=1&sn=3aac62f1a781deff18444f193221bf20&chksm=fd1cceeeca6b47f8704244d429535c4a6c26472ceee8fd5cf33328df8880d7ee9615e767b55c#rd" target="_blank" rel="noopener">Docker一键搭建 memos 轻量级笔记服务简单指南</a></p></li><li><input disabled="" type="checkbox"> <p><a href="https://mp.weixin.qq.com/merchant/mppaysubscribe?action=go_paid_article&article_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzU3NTgwNjU5Mg%3D%3D%26mid%3D2247484201%26idx%3D1%26sn%3D4bce943a914c79ebbfec1db0391e6834%26chksm%3Dfd1ccec6ca6b47d0ebb92c0712e77265e550a60a4c7c842653eef425fbe7a0475f8801504f70%23rd&token=1736264702" target="_blank" rel="noopener">用Obsidian构建一个自己的数字花园Digital Garden网站</a></p></li><li><input disabled="" type="checkbox"> <p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTgwNjU5Mg==&mid=2247484081&idx=1&sn=cba56a8ec3a6b822fc4166cbc5b72770&chksm=fd1ccf5eca6b46489c70e1c8aede5a519f9e314d11b108784867089996a8ce40bcde3b829f19#rd" target="_blank" rel="noopener">Trollstore 2(巨魔商店2)安装教程（16.1.1）</a></p></li><li><input disabled="" type="checkbox"> <p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTgwNjU5Mg==&mid=2247484081&idx=2&sn=849eec9a0592b8a41d7ba344633f62af&chksm=fd1ccf5eca6b4648f2af9cbb13163864a95372035b5fd4d58e53f14853fa465d10a5695c38b9#rd" target="_blank" rel="noopener">两款安卓苹果手机都能用的微信聊天记录查看备份软件</a></p></li><li><input disabled="" type="checkbox"> <p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTgwNjU5Mg==&mid=2247484081&idx=3&sn=75437795c065fe66e3b6fdcadad80e0c&chksm=fd1ccf5eca6b46480012d0f1e9dc4ddea44f4ba5920c727dc1a0be12ceee675e1513094723e2#rd" target="_blank" rel="noopener">5分钟把星火认知大模型接入微信公众号</a></p></li></ul><h3 id="我的发卡站"><a href="#我的发卡站" class="headerlink" title="我的发卡站~"></a>我的发卡站~</h3><p><img src="https://pic.imgdb.cn/item/663c900f0ea9cb1403525e30.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 阅读 </tag>
+            
+            <tag> 思考 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo Host key verification failed.</title>
       <link href="/2023/11/20/hexo-host-key-verification-failed/"/>
       <url>/2023/11/20/hexo-host-key-verification-failed/</url>
