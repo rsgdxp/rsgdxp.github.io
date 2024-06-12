@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rsgdxp.github.io/"/>
-  <updated>2024-05-31T09:28:53.606Z</updated>
+  <updated>2024-06-12T02:24:14.724Z</updated>
   <id>https://rsgdxp.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《交易》思维导图</title>
+    <link href="https://rsgdxp.github.io/2024/06/12/jiao-yi-si-wei-dao-tu/"/>
+    <id>https://rsgdxp.github.io/2024/06/12/jiao-yi-si-wei-dao-tu/</id>
+    <published>2024-06-12T02:13:13.000Z</published>
+    <updated>2024-06-12T02:24:14.724Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;《交易》| 李方圆解读&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;u&gt;思维导图在最后！&lt;/u&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#_103&quot;&gt;1.  什么是商业模式？商业模式就是利益相关者的交易结构。… 1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#_105&quot;&gt;1.1.  
+        
+      
+    
+    </summary>
+    
+    
+      <category term="阅读分享" scheme="https://rsgdxp.github.io/categories/%E9%98%85%E8%AF%BB%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="交易" scheme="https://rsgdxp.github.io/tags/%E4%BA%A4%E6%98%93/"/>
+    
+      <category term="导图" scheme="https://rsgdxp.github.io/tags/%E5%AF%BC%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo-theme-matery使用手册</title>
@@ -591,35 +623,6 @@ FATAL Something&amp;#39;s wrong. Maybe you
       <category term="docker" scheme="https://rsgdxp.github.io/tags/docker/"/>
     
       <category term="sspanel" scheme="https://rsgdxp.github.io/tags/sspanel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>v2board 网络加速</title>
-    <link href="https://rsgdxp.github.io/2020/06/05/v2board-wang-luo-jia-su/"/>
-    <id>https://rsgdxp.github.io/2020/06/05/v2board-wang-luo-jia-su/</id>
-    <published>2020-06-05T03:19:29.000Z</published>
-    <updated>2024-05-31T09:13:19.433Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;网络加速-科学上网&quot;&gt;&lt;a href=&quot;#网络加速-科学上网&quot; class=&quot;headerlink&quot; title=&quot;网络加速 | 科学上网&quot;&gt;&lt;/a&gt;网络加速 | 科学上网&lt;/h1&gt;&lt;h1 id=&quot;以下内容均已过期！2024-05-31更新&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="经验分享" scheme="https://rsgdxp.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="v2board" scheme="https://rsgdxp.github.io/tags/v2board/"/>
-    
-      <category term="网络加速" scheme="https://rsgdxp.github.io/tags/%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/"/>
     
   </entry>
   
